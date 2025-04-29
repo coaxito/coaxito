@@ -1,6 +1,7 @@
 +++
 title = "Bacon, ovos e marmeladas psicodélicas do Pink Floyd"
-date = "2025-03-31T13:06:11-03:00"
+date = "2025-03-31"
+lastmod = "2025-04-29"
 tags = ["musica"]
 url = "/blog/bacon-ovos-e-marmeladas-psicodelicas-do-pink-floyd/"
 description = "Alan's Psychedelic Breakfast é a despedida perfeita de Atom Heart Mother. Entre ovos fritos, bacon, cereais, marmelada e diálogos descontraídos, o Pink Floyd transforma paisagens sonoras de cafés da manhã em Los Angeles em uma experiência musical hipnotizante."
@@ -10,19 +11,19 @@ author = "Breno Santana"
 
 ## Talheres à mesa, é hora de tomar café
 
-Em 1970, no icônico álbum da vaquinha — Atom Heart Mother, o Pink Floyd apresentou uma obra experimental única e intrigante, explorando as paisagens sonoras de diferentes cafés da manhã em Los Angeles.
+No icônico álbum da vaquinha, o Pink Floyd apresentou uma obra experimental única e intrigante, explorando paisagens sonoras de diferentes cafés da manhã em Los Angeles.
 
-Explorar a discografia completa da banda revela o perfeccionismo de seus membros, que desde o primeiro álbum em 1967, surpreende com suas ideias inovadoras e mirabolantes.
+Explorar a discografia completa da banda revela o perfeccionismo de seus membros, que desde o primeiro lançamento em 1967, surpreendeu com suas ideias inovadoras e mirabolantes.
 
 Composições conceituais, letras filosóficas, técnicas inovadoras de estúdio, psicodelia e experimentação são apenas alguns dos elementos que definem o quarteto britânico.
 
 ![Membros do Pink Floyd sentados em um banco, cobrindo o rosto com as mãos. Fundo com árvores. Imagem em preto e branco, clima descontraído.](banda_reunida.jpg "Reprodução: Pink Floyd")
 
-O conceito da faixa 'Alan's Psychedelic Breakfast' é relativamente simples, mas completamente inédito para a época.
+O conceito da faixa 'Alan's Psychedelic Breakfast' é relativamente simples, mas completamente inédito para o contexto musical da época.
 
-Por meio de uma ambientação imersiva, encantadoras melodias e a icônica narração de Alan Styles, a composição nos leva a vivenciar a experiência de diversos cafés da manhã, desde o preparo até o consumo.
+Através de uma ambientação imersiva, melodias encantadoras e uma narração icônica — somos transportados para os rituais matinais de Alan, desde o preparo até o consumo de sua refeição.
 
-Com incríveis 13 minutos de duração, a suíte conceitual é dividida em três partes distintas: Rise and Shine, Sunny Side Up e Morning Glory, cada uma com suas peculiaridades.
+Com incríveis 13 minutos de duração, a suíte conceitual é dividida em três partes distintas: 'Rise and Shine', 'Sunny Side Up' e 'Morning Glory', cada uma com suas peculiaridades.
 
 ## Rise and Shine — Levante-se e brilhe
 
@@ -36,29 +37,29 @@ Depois, ouvimos uma narração dividida em camadas, descrevendo o que ele irá c
 
 Após circular pela cozinha, possivelmente pegando uma frigideira e alguns pedaços de bacon, Alan começa a acender vários fósforos em um ritmo contínuo e divertido.
 
-Somando perfeitamente com a entrada elegante de Richard Wright com seu piano e órgão Hammond, cria uma atmosfera vibrante, marcada por melodias leves e descontraídas.
+Somando perfeitamente com a entrada elegante de Richard Wright com seu piano e órgão Hammond, criando uma atmosfera vibrante, marcada por melodias leves e descontraídas.
 
 ![Richard Wright concentrado tocando seu teclado. Tons monocromáticos criam atmosfera introspectiva. Equipamento em segundo plano.](richard_wright_no_estudio.jpg "Reprodução: Jorgen Angel")
 
 ## Sunny Side Up — Lado ensolarado para cima
 
-Na sequência, Alan casualmente começa dizendo a seguinte frase: “Café da manhã em Los Angeles, coisas macrobióticas.”
+Na sequência, Alan começa casualmente dizendo a seguinte frase: “Café da manhã em Los Angeles, coisas macrobióticas.”
 
 Enquanto enche sua xícara com um delicioso café, adiciona algo — talvez açúcar — mexe com a colher e dá alguns poucos goles.
 
-A macrobiótica é um regime alimentar inspirado na filosofia oriental, que promove uma dieta equilibrada com alimentos naturais, integrais e orgânicos, como cereais, legumes, verduras, algas marinhas e sementes.
+A macrobiótica citada é um regime alimentar inspirado na filosofia oriental, que promove uma dieta equilibrada com alimentos naturais, integrais e orgânicos, como cereais, legumes, verduras, algas marinhas e sementes.
 
-A obra prossegue com uma sequência de sons cotidianos, como o de cereais sendo despejados numa tigela, seguido do crepitar de bacon, ovos ou salsichas (ou todos eles) sendo preparados em uma frigideira.
+A obra segue com uma sequência de gravações, como o de cereais sendo despejados numa tigela, seguido do crepitar de bacon, ovos ou salsichas sendo preparados em uma frigideira.
 
-Uma nova melodia emerge, marcada pela trilha de dois violões e uma guitarra de aço.
-
-![David Gilmour tocando guitarra de aço, concentrado, em preto e branco. Fundo escuro, foco em suas expressões calmas e instrumentos.](david_gilmour_com_guitarra_steel.jpg "Reprodução: Rock Archive")
+Uma nova melodia emerge, destacada pela trilha de dois violões e uma guitarra de aço.
 
 Enquanto nosso protagonista se entrega ao prazer matinal de saborear seu delicioso, caprichoso e psicodélico café da manhã.
 
-Dessa vez, é trabalhado um ritmo mais melancólico, transmitindo um sentimento de reflexão para esse momento tão mundano.
+![David Gilmour tocando guitarra de aço, concentrado, em preto e branco. Fundo escuro, foco em suas expressões calmas e instrumentos.](david_gilmour_com_guitarra_steel.jpg "Reprodução: Rock Archive")
 
-É impressionante como a peça, composta e interpretada por David Gilmour, adiciona um tom cômico ao barulhento mastigar de Alan, que chega até a se engasgar no processo.
+Dessa vez, é conduzido um ritmo mais melancólico, transmitindo um sentimento de reflexão para esse momento tão mundano.
+
+É impressionante como a peça, composta e interpretada por David Gilmour, adiciona um tom cômico ao barulhento e exagerado mastigar de Alan, que chega até a se engasgar no processo.
 
 Essas gravações em fita são essenciais para a atmosfera, capturando a intimidade e a casualidade que a obra busca transmitir.
 
@@ -76,13 +77,13 @@ Retornamos às proteínas sendo preparadas na frigideira, enquanto Alan comparti
 
 Em meio ao som estridente das frituras, a música revela-se sem timidez, até preencher todo o espaço com a bateria frenética de Nick Mason, o piano encantador de Richard Wright e o baixo icônico e sutil de Roger Waters.
 
-Até que a atmosfera acelerada toma forma, crescendo em intensidade com os fabulosos solos de guitarra de David Gilmour entrelaçando-se em perfeita harmonia.
+Até que a atmosfera acelerada, enfim, toma forma, crescendo em intensidade com os fabulosos solos de guitarra de David Gilmour entrelaçando-se em perfeita harmonia.
 
-Essa energia é intensificada por montagens e experimentações com fitas, incluindo as vozes de Alan em colagens caóticas e espaciais.
+Essa energia é intensificada por montagens e experimentações com fitas — incluindo as vozes de Alan em colagens caóticas e espaciais.
 
 ![Estúdio de gravação em preto e branco. Roger Waters de suéter apoia a cabeça em uma mesa de som, aparentando cansaço. Outras pessoas ao fundo.](roger_waters_no_estudio.jpg "Reprodução: Rock Archive")
 
-Em uma dança perfeita, a banda segue até o final com cada instrumento enriquecendo a atmosfera de forma extraordinária.
+Em uma dança perfeita, a banda performa com maestria cada instrumento, enriquecendo a atmosfera de forma extraordinária.
 
 Somos hipnotizados pelo som da água escorrendo pelo ralo da pia, até que a torneira é fechada e ouvimos passos pelo ambiente.
 
@@ -92,7 +93,7 @@ Então, tranca a porta, vai embora e nos deixa apenas com o som da água termina
 
 ![Encarte do Atom Heart Mother do Pink Floyd, com vacas pastando em um campo gramado rodeado por árvores. O céu está nublado, criando uma atmosfera calma e serena. Imagem em preto e branco.](encarte_do_atom_heart_mother.jpg "Reprodução: Pink Floyd")
 
-É curioso observar que, Alan não fechou completamente a torneira da cozinha, e as mesmas gotas que ouvimos no início da obra podem ser ouvidas novamente.
+É curioso observar que, Alan não fechou completamente a torneira da cozinha, e as mesmas gotas que escutamos no início da obra podem ser ouvidas novamente.
 
 O que gera um looping perfeito, permitindo-nos mergulhar infinitamente neste ciclo.
 
@@ -110,6 +111,6 @@ Também costumava preparar o café da manhã do grupo, gerando conversas descont
 
 Durante as gravações de Atom Heart Mother, o quarteto decidiu imortalizar seu ritual matinal.
 
-Infelizmente, Alan Styles nos deixou em 2011 — uma perda significativa para a história do Pink Floyd e da música experimental.
+Infelizmente, Alan Styles nos deixou em 2011 — uma perda significativa para a história do Pink Floyd e da música como um todo.
 
-Permita-se viajar nessa experiência psicodélica que o Pink Floyd nos proporcionou em um dos álbuns mais incríveis (e o meu favorito da banda) já produzidos na história!
+Permita-se viajar nessa experiência matinal psicodélica que o Pink Floyd nos proporcionou em um dos álbuns mais incríveis (e o meu favorito da banda) já produzidos na história.

@@ -1,8 +1,9 @@
 +++
-title = "Plantasia encanta com sua filosofia e misticismo"
-date = "2025-01-31T13:06:11-03:00"
+title = "Plantasia encanta com seu conceito e misticismo"
+date = "2025-01-31"
+lastmod = "2025-04-29"
 tags = ["musica"]
-url = "/blog/plantasia-encanta-com-sua-filosofia-e-misticismo/"
+url = "/blog/plantasia-encanta-com-seu-conceito-e-misticismo/"
 description = "Plantasia é um disco de 1976 criado para plantas e aqueles que às amam, misturando sintetizadores, misticismo e uma conexão única e aconchegante com a natureza."
 images = ["arte_do_plantasia.jpg"]
 author = "Breno Santana"
@@ -20,15 +21,15 @@ Mort Garson foi um dos pioneiros da música eletrônica e do extraordinário sin
 
 A distribuição deste disco em 1976 tem uma história curiosa — e, como não poderia ser diferente, tem tudo a ver com plantas.
 
-Na Los Angeles da época, mais precisamente na Avenida Melrose, havia uma encantadora floricultura chamada Mother Earth's Plant Boutique, administrada por Joel Rapp e Lynn.
+Na Los Angeles da época, mais precisamente na Avenida Melrose, havia uma encantadora floricultura chamada 'Mother Earth's Plant Boutique', administrada por Joel Rapp e Lynn.
 
-Os clientes sortudos que buscavam por plantas domésticas tiveram o prazer de levar para casa brindes exclusivos: um guia completo de cuidados, especialmente elaborado pelos proprietários, e, como cereja do bolo, o recém-lançado vinil de Plantasia.
+Por um período de tempo, clientes sortudos que buscavam por plantas domésticas tiveram o prazer de levar para casa brindes exclusivos: um guia completo de cuidados, especialmente elaborado pelos proprietários, e, como cereja do bolo, o recém-lançado vinil de Plantasia.
 
 ## Natureza portátil para os seus ouvidos
 
-As pesquisas sobre os efeitos da música nas plantas ainda geram debates e seguem sem conclusões definitivas.
+As pesquisas sobre os efeitos da música nas plantas ainda geram debates e, infelizmente, seguem sem conclusões definitivas.
 
-No entanto, isso em nada desvaloriza a qualidade extraordinária da obra. As músicas vão além do hipnotizante, conduzindo você a uma espécie de fotossíntese sonora.
+No entanto, isso em nada desvaloriza a qualidade extraordinária e impecável da obra. As músicas vão além do hipnotizante, conduzindo você a uma espécie única de fotossíntese sonora.
 
 A introdução do disco é um grande espetáculo, e o desenrolar das faixas é místico, etéreo e futurista. Criando uma conexão profunda com a natureza, onde quer que você esteja.
 
@@ -44,7 +45,7 @@ Ou talvez isso se deva ao fato de Mort Garson ter sido um ocultista — quem sab
 
 Plantasia tornou-se um clássico cult da música eletrônica, influenciando diversos artistas e gêneros, como a música ambiente, terapêutica e experimental contemporânea.
 
-O disco foi relançado em junho de 2019, pela gravadora independente Sacred Bones Records, ressuscitando quase meio século depois, a sua poética mensagem de valorização ambiental (e culto ao Moog).
+O disco foi relançado em junho de 2019 (físico e digital), pela gravadora independente Sacred Bones Records, ressuscitando quase meio século depois, a sua poética mensagem de valorização ambiental (e culto ao Moog).
 
 Não posso negar que sonho com um futuro em que as plantas possam falar e, com muita gentileza, nos peçam para tocar esse disco para acalmá-las durante o frio do inverno.
 
