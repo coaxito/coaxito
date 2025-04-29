@@ -2,6 +2,7 @@
 title = "Plantasia encanta com sua filosofia e misticismo"
 date = "2025-01-31T13:06:11-03:00"
 tags = []
+url = "/blog/plantasia-encanta-com-sua-filosofia-e-misticismo/"
 +++
 
 ## O presente perfeito para as suas plantas

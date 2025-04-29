@@ -2,6 +2,7 @@
 title = "Begônias, aquarelas e as estrelas do nosso amor"
 date = "2025-02-17T13:06:11-03:00"
 tags = []
+url = "/blog/begonias-aquarelas-e-as-estrelas-do-nosso-amor/"
 +++
 
 ## Um abrigo quentinho para meu coração

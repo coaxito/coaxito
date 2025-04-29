@@ -2,6 +2,7 @@
 title = "Bacon, ovos e marmeladas psicodélicas do Pink Floyd"
 date = "2025-03-31T13:06:11-03:00"
 tags = []
+url = "/blog/bacon-ovos-e-marmeladas-psicodelicas-do-pink-floyd/"
 +++
 
 ## Talheres à mesa, é hora de tomar café

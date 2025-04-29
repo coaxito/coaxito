@@ -8,7 +8,7 @@ theme = 'hugo-bearblog'
 # Basic metadata configuration for your blog.
 title = "Breno's Blog"
 author = "Breno Santana"
-copyright = "Copyright © 2025, Breno Santana."
+copyright = "Copyright © 2025, Breno Santana de Souza."
 languageCode = "pt-br"
 defaultContentLanguage = "pt-br"
 
@@ -19,27 +19,27 @@ enableRobotsTXT = true
 disableKinds = ["taxonomy"]
 ignoreErrors = ["error-disable-taxonomy"]
 [permalinks]
-  blog = "/:slug/"
-  tags = "/blog/:slug"
+  blog = "/:slug/" # Mantido, pois posts estão em content/blog/
+  # linha 'tags = ...' foi REMOVIDA
 
 [params]
   # The "description" of your website. This is used in the meta data of your generated html.
-  description = "Hugo + Bear = :heart:"
+  description = "Eu me chamo Breno Santana, mas também pode me chamar de Coaxito. Esse daqui é o meu cantinho digital. Nas horas vagas, me dedico a escrever no meu blog sobre música, tecnologia e internet. Também sou fotógrafo, web designer e artista independente de folk e música ambiente."
 
   # The path to your "favicon". This should be a square (at least 32px x 32px) png-file.
   # Hint: It's good practise to also put a "favicon.ico"-file into your "static"-folder.
-  favicon = "images/favicon.png"
+  favicon = "favicon.png"
 
   # These "images" are used for the structured data templates. This will show up, when
   # services like Twitter or Slack want to generate a preview of a link to your site.
   # See https://gohugo.io/templates/internal#twitter-cards and
   # https://gohugo.io/templates/internal#open-graph.
-  images = ["images/share.png"]
+  images = ["favicon.png"]
 
   # Another "title" :-). This one is used as the site_name on the Hugo's internal
   # opengraph structured data template.
   # See https://ogp.me/ and https://gohugo.io/templates/internal#open-graph.
-  title = "Hugo ʕ•ᴥ•ʔ Bear"
+  title = "Breno's Blog"
 
   # This theme will, by default, inject a made-with-line at the bottom of the page.
   # You can turn it off, but we would really appreciate if you don’t :-).

@@ -2,6 +2,7 @@
 title = "Pinguins são muito mais interessantes do que janelas"
 date = "2025-04-04T13:06:11-03:00"
 tags = []
+url = "/blog/pinguins-sao-muito-mais-interessantes-do-que-janelas/"
 +++
 
 ## Era uma vez um pinguim carismático...
