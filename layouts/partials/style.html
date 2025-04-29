@@ -1,0 +1,267 @@
+<style>
+  :root {
+    /* --- Variáveis Globais e Paleta Light Mode --- */
+    --width: 720px;
+    --font-main: 'Roboto Slab', sans-serif;
+    --font-secondary: 'Roboto Slab', sans-serif;
+    --font-scale: 1em;
+
+    /* Cores Confortáveis (Light) */
+    --background-color: #fafafa; /* Off-white suave */
+    --heading-color: #2a2a2a;    /* Cinza muito escuro (em vez de preto) */
+    --text-color: #4d4d4d;       /* Cinza escuro para texto */
+    --link-color: #0056b3;       /* Azul um pouco mais escuro/menos vibrante */
+    --visited-color: var(--link-color); /* MODIFICADO: Visitados usam a cor normal do link */
+    --code-background-color: #f0f0f0; /* Cinza claro para fundo de código */
+    --code-color: #2a2a2a;       /* Cor do código igual aos títulos */
+    --blockquote-color: #4d4d4d; /* Cor da citação igual ao texto */
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      /* --- Paleta Dark Mode --- */
+      --background-color: #212529; /* Cinza muito escuro (Off-black) */
+      --heading-color: #f1f1f1;    /* Cinza muito claro (Off-white) */
+      --text-color: #cccccc;       /* Cinza claro para texto */
+      --link-color: #7ab8e7;       /* Azul claro e suave (cor padrão de link no dark) */
+      --visited-color: var(--link-color); /* MODIFICADO: Visitados usam a cor normal do link */
+      --code-background-color: #343a40; /* Cinza escuro (ligeiramente diferente do fundo) */
+      --code-color: #cccccc;       /* Cor do código igual ao texto */
+      --blockquote-color: #cccccc; /* Cor da citação igual ao texto */
+    }
+
+    /* --- Regras Específicas do Dark Mode --- */
+
+    /* Define a cor dos links dos títulos das postagens no modo escuro */
+    main ul li a {
+      color: var(--heading-color); /* Usa a cor 'off-white' dos títulos (#f1f1f1) */
+    }
+
+    /* Define a cor dos links VISITADOS dos títulos também no modo escuro */
+    main ul li a:visited {
+      color: var(--heading-color); /* Mesma cor para manter a consistência */
+    }
+
+  } /* --- Fim do @media (prefers-color-scheme: dark) --- */
+
+  /* --- Regras CSS Gerais (Aplicáveis a ambos os modos) --- */
+  body {
+    font-family: var(--font-secondary);
+    font-size: var(--font-scale);
+    margin: auto;
+    padding: 20px;
+    max-width: var(--width);
+    text-align: left;
+    background-color: var(--background-color);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.5;
+    color: var(--text-color);
+  }
+
+  /* --- Estilos Individuais para Cabeçalhos H1, H2, H3 (Separados) --- */
+  h1 {
+    font-family: var(--font-main);
+    color: var(--heading-color);
+    font-size: 1.4em;
+    margin-top: 1.5em;
+    margin-bottom: 0.75em;
+  }
+
+  h2 {
+    font-family: var(--font-main);
+    color: var(--heading-color);
+    font-size: 1.1em;
+    margin-top: 1.25em;
+    margin-bottom: 0.6em;
+  }
+
+  h3 {
+    font-family: var(--font-main);
+    color: var(--heading-color);
+    font-size: 1.5em;
+    margin-top: 1.1em;
+    margin-bottom: 0.5em;
+  }
+
+  /* --- Estilos Comuns para Cabeçalhos H4, H5, H6 --- */
+  h4, h5, h6 {
+    font-family: var(--font-main);
+    color: var(--heading-color);
+    /* Adicione font-size e margin se necessário */
+  }
+
+
+  a { /* Estilo padrão para TODOS os links */
+    color: var(--link-color);
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+   p { /* Estilo padrão para TODOS os links */
+   font-family: var(--font-main);
+    color: var(--heading-color);
+    font-size: 1em;
+    margin-top: 1.1em;
+    margin-bottom: 0.5em;
+  }
+
+  /* (Implicitamente, a:visited agora também usa var(--link-color) por causa da variável) */
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  nav a {
+    margin-right: 8px;
+    text-decoration: underline;
+  }
+
+  strong, b {
+    color: var(--heading-color);
+  }
+
+  button {
+    margin: 0;
+    cursor: pointer;
+  }
+
+time {
+  font-family: var(--font-secondary); /* <<< CORRIGIDO para usar a variável correta */
+  font-style: normal;
+  font-size: 15px; /* Você pode ajustar este tamanho se quiser */
+}
+
+  main {
+    line-height: 1.5;
+  }
+  
+  /* Remove a margem superior do primeiro elemento dentro de main */
+main > *:first-child {
+  margin-top: 0;
+}
+
+  table {
+    width: 100%;
+  }
+
+  hr {
+    border: 0;
+    border-top: 1px dashed;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  code { /* Código inline */
+    font-family: monospace;
+    padding: 2px;
+    background-color: var(--code-background-color);
+    color: var(--code-color);
+    border-radius: 3px;
+  }
+
+  blockquote {
+  border-left: 3px solid var(--link-color); /* Exemplo: Borda um pouco mais grossa e azul */
+  color: var(--blockquote-color);
+  padding-left: 1em;   /* << REDUZIDO: Espaço entre a borda e o texto (Ajuste 1em, 1.5em, 15px...) */
+  margin-left: 0;      /* << ADICIONADO: Remove a indentação externa padrão */
+  margin-right: 0;     /* Opcional: Remove margem direita padrão */
+  margin-top: 1em;     /* Opcional: Espaço vertical acima */
+  margin-bottom: 1em;  /* Opcional: Espaço vertical abaixo */
+  font-style: italic;    /* Mantido */
+}
+
+  footer {
+    padding: 25px 0;
+    text-align: center;
+  }
+
+/* --- Estilos para o Cabeçalho Principal --- */
+
+header {
+  margin-bottom: 2.5em; /* Espaço abaixo do header (Sua regra existente) */
+}
+
+/* Estilos para o PARÁGRAFO (<p>) que envolve o título do site */
+header p.site-title { /* Seletor focado no <p> com a classe */
+  font-family: var(--font-main);
+  font-size: 1.6em;        /* Tamanho que você ajustou */
+  font-weight: bold;       /* Negrito */
+  margin: 0;               /* Sem margens extras no parágrafo */
+  line-height: 1.2;
+  display: inline-block; /* Ajuda a alinhar caso o 'a' cause problemas */
+}
+
+/* Estilo para o LINK (<a> com classe "title") do título do site */
+header a.title {
+  color: var(--heading-color); /* Define a cor correta (branco/off-white) */
+  text-decoration: none;       /* Sem sublinhado */
+  display: block;              /* Necessário para margin-bottom funcionar bem */
+  margin-bottom: 1em;        /* Cria espaço abaixo. Ajuste 0.5em como quiser (ex: 1em, 10px) */
+}
+
+/* Estilo para o LINK do título do site QUANDO HOVER */
+header a.title:hover {     /* <<< SELETOR CORRIGIDO para o hover */
+  color: var(--heading-color); /* Mantém a cor */
+  text-decoration: none;       /* Sem sublinhado */
+}
+
+/* --- Fim dos Estilos do Cabeçalho --- */
+
+/* IMPORTANTE: Se você ainda tiver as regras INCORRETAS abaixo em algum lugar, APAGUE-AS: */
+/* header .site-title a { ... } */
+/* header .site-title a:hover { ... } */
+
+  .title:hover {
+    text-decoration: none;
+  }
+
+  .title h1 {
+    font-size: 1.5em;
+  }
+
+  .inline {
+    width: auto !important;
+  }
+
+  .highlight, .code { /* Blocos de código */
+    padding: 1px 15px;
+    background-color: var(--code-background-color);
+    color: var(--code-color);
+    border-radius: 3px;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    overflow-x: auto;
+  }
+
+  /* --- Estilos para Lista de Posts --- */
+  main ul {
+    list-style-type: none; /* Remove os pontinhos */
+    padding-left: 0;       /* Remove o recuo da esquerda */
+  }
+
+  main ul li {
+    margin-bottom: 1.5em;   /* <<< AUMENTADO para mais espaço. Ajuste (ex: 0.8em, 1.2em) como preferir. */
+    /* Adicione display:flex; justify... etc se o layout quebrar */
+    /* display: flex; */
+    /* justify-content: space-between; */
+}
+
+  main ul li span { /* Span da Data */
+    flex: 0 0 100px;   /* Reserva um espaço fixo de 100px para a data. */
+    text-align: right;  /* Alinha o texto da data à direita */
+    margin-left: 1em;   /* Adiciona um espaço entre o título e a data */
+  }
+
+  /* --- Media Query para Telas Pequenas (Celulares) --- */
+  @media (max-width: 767px) {
+    main ul li a {
+      max-width: 75%; /* Link do título não ocupa mais que 75% */
+    }
+    /* Opcional: Reduzir espaço da data em telas pequenas */
+    /* main ul li span { flex-basis: 80px; } */
+  } /* --- Fim da Media Query --- */
+
+</style>

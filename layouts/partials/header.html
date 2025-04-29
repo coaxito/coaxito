@@ -1,0 +1,5 @@
+<a href="{{ "" | relURL }}" class="title">
+  {{/* H1 foi trocado por P com classe para o título do site */}}
+  <p class="site-title">{{ .Site.Title }}</p>
+</a>
+<nav>{{- partial "nav.html" . -}}</nav>

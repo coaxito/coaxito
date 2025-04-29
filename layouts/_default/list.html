@@ -1,0 +1,11 @@
+{{ define "main" }}
+<ul>
+  {{ range .Pages }}
+  <li>
+    <div style="display: flex; justify-content: space-between; align-items: baseline;">
+      <a style="margin-right: 1em; text-decoration: none;" href="{{ .Permalink }}">{{ .Title }}</a>
+      <span>{{ partial "format_date_pt.html" .Date }}</span> </div>
+  </li>
+  {{ end }}
+</ul>
+{{ end }}

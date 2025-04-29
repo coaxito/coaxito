@@ -1,0 +1,19 @@
+{{/*layouts/partials/format_date_pt.html*/}}
+{{/* Este partial recebe um objeto de data como contexto (.) */}}
+{{ $dateObject := . }} {{/* Recebe a data */}}
+
+{{/* Pega o número do mês (1-12) */}}
+{{ $monthNum := $dateObject.Month }}
+
+{{/* Cria a lista de abreviações em Português (índice 0 a 11) */}}
+{{ $monthsPT := slice "Jan" "Fev" "Mar" "Abr" "Mai" "Jun" "Jul" "Ago" "Set" "Out" "Nov" "Dez" }}
+
+{{/* Pega a abreviação correta (subtrai 1 do número do mês para pegar o índice certo) */}}
+{{ $monthAbbrPT := index $monthsPT (sub $monthNum 1) }}
+
+{{/* Formata o dia e o ano separadamente */}}
+{{ $day := $dateObject.Format "02" }}
+{{ $year := $dateObject.Format "2006" }}
+
+{{/* Monta a string final no formato "DD Mon, YYYY" e a exibe */}}
+{{- printf "%s %s, %s" $day $monthAbbrPT $year -}}

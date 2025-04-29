@@ -1,0 +1,19 @@
+{{ define "main" }}
+<main> <article class="post"> <header class="post-header">
+      <h1>{{ .Title }}</h1> {{/* Exibe a data da postagem, se disponível */}}
+      {{ with .Date }}
+        <div style="margin-bottom: 1em;"> <time datetime="{{ .Format "2006-01-02T15:04:05Z07:00" }}">
+            {{ partial "format_date_pt.html" . }} </time>
+        </div>
+      {{ end }}
+
+    </header>
+
+    {{/* Classe para o conteúdo principal, útil para aplicar estilos se necessário */}}
+    <div class="post-content">
+      {{ .Content }} </div>
+
+    {{/* Opcional: Adicionar links para tags/categorias aqui depois, se quiser */}}
+    </article>
+</main>
+{{ end }}

@@ -1,6 +1,11 @@
+# Arquivos gerados pelo Hugo - NÃO ENVIAR!
 /public/
 /resources/
 *.db
+
+# Arquivo de lock de build
 .hugo_build.lock
+
+# Arquivos de sistema operacional (opcional, mas bom ter)
 .DS_Store
 Thumbs.db
