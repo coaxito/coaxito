@@ -1,0 +1,73 @@
+name: Deploy Hugo site to Pages
+
+on:
+  # Roda quando houver push para o branch principal
+  push:
+    branches:
+      - main # Certifique-se que 'main' é seu branch principal
+
+  # Permite rodar manualmente pela aba Actions no GitHub
+  workflow_dispatch:
+
+# Define permissões para o token do GitHub Actions
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Permite apenas um deploy concorrente
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+# Usa bash por padrão
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  # Job de Build (Construção)
+  build:
+    runs-on: ubuntu-latest
+    env:
+      HUGO_VERSION: 0.110.0 # Use uma versão recente ou a mesma que você usa localmente
+    steps:
+      - name: Install Hugo CLI
+        run: |
+          wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb \
+          && sudo dpkg -i ${{ runner.temp }}/hugo.deb
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          submodules: true # Baixa o tema que é um submódulo (se você usou Opção 1) ou 'recursive'
+          fetch-depth: 0
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v5
+      - name: Build with Hugo
+        env:
+          HUGO_ENVIRONMENT: production
+          HUGO_ENV: production
+          # A baseURL será pega automaticamente da configuração do GitHub Pages
+          # HUGO_BASEURL: ${{ steps.pages.outputs.base_url }}
+        run: |
+          hugo \
+            --gc \
+            --minify \
+            --baseURL "${{ steps.pages.outputs.base_url }}"
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./public # Pasta onde o Hugo gera o site
+
+  # Job de Deploy (Publicação)
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build # Só roda depois que o build terminar
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4 # Action oficial para deploy no Pages
