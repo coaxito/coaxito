@@ -6,28 +6,28 @@
     --font-secondary: 'Literata', sans-serif;
     --font-scale: 1em;
 
-    /* Cores Confortáveis (Light) */
-    --background-color: #fafafa; /* Off-white suave */
-    --heading-color: #2a2a2a;    /* Cinza muito escuro (em vez de preto) */
-    --text-color: #4d4d4d;       /* Cinza escuro para texto */
-    --link-color: #0056b3;       /* Azul um pouco mais escuro/menos vibrante */
-    --visited-color: var(--link-color); /* MODIFICADO: Visitados usam a cor normal do link */
-    --code-background-color: #f0f0f0; /* Cinza claro para fundo de código */
-    --code-color: #2a2a2a;       /* Cor do código igual aos títulos */
-    --blockquote-color: #4d4d4d; /* Cor da citação igual ao texto */
+    /* Cores Confortáveis (Light) - MODIFICADO */
+    --background-color: #E0E0E0; /* Cinza bem claro (fundo) */
+    --heading-color: #121212;    /* Preto bem escuro (títulos) */
+    --text-color: #121212;       /* Preto bem escuro (texto) */
+    --link-color: #0056b3;
+    --visited-color: var(--link-color);
+    --code-background-color: #f0f0f0;
+    --code-color: #2a2a2a;
+    --blockquote-color: #4d4d4d;
   }
 
   @media (prefers-color-scheme: dark) {
     :root {
-      /* --- Paleta Dark Mode --- */
-      --background-color: #212529; /* Cinza muito escuro (Off-black) */
-      --heading-color: #f1f1f1;    /* Cinza muito claro (Off-white) */
-      --text-color: #fafafa;       /* Cinza claro para texto */
-      --link-color: #7ab8e7;       /* Azul claro e suave (cor padrão de link no dark) */
-      --visited-color: var(--link-color); /* MODIFICADO: Visitados usam a cor normal do link */
-      --code-background-color: #343a40; /* Cinza escuro (ligeiramente diferente do fundo) */
-      --code-color: #cccccc;       /* Cor do código igual ao texto */
-      --blockquote-color: #cccccc; /* Cor da citação igual ao texto */
+      /* --- Paleta Dark Mode - MODIFICADO */
+      --background-color: #121212; /* Preto bem escuro (fundo) */
+      --heading-color: #E0E0E0;    /* Cinza bem claro (títulos) */
+      --text-color: #E0E0E0;       /* Cinza bem claro (texto) */
+      --link-color: #7ab8e7;
+      --visited-color: var(--link-color);
+      --code-background-color: #343a40;
+      --code-color: #cccccc;
+      --blockquote-color: #cccccc;
     }
 
     /* --- Regras Específicas do Dark Mode --- */
