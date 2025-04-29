@@ -1,0 +1,48 @@
+{{/* Arquivo: layouts/_default/_markup/render-image.html */}}
+{{/* Versão CORRIGIDA */}}
+
+{{ $src := .Page.Resources.GetMatch (printf "%s" (.Destination | safeURL)) }}
+
+{{ if $src }}
+  <figure style="margin: 1.5em 0;">
+    {{ $data := newScratch }}
+    {{ $maxWidth := 720 }}
+
+    {{ if gt $src.Width $maxWidth }}
+      {{ $data.Set "webp" ($src.Resize (printf "%dx webp q85" $maxWidth)) }}
+      {{ $data.Set "fallback" ($src.Resize (printf "%dx q85" $maxWidth)) }}
+      {{ $data.Set "width" $maxWidth }}
+      {{ $data.Set "height" ($data.Get "fallback").Height }}
+    {{ else }}
+      {{ $data.Set "webp" ($src.Resize (printf "%dx%d webp q85" $src.Width $src.Height)) }}
+      {{ $data.Set "fallback" ($src.Resize (printf "%dx%d q85" $src.Width $src.Height)) }}
+      {{ $data.Set "width" $src.Width }}
+      {{ $data.Set "height" $src.Height }}
+    {{ end }}
+
+    {{ $webp := $data.Get "webp" }}
+    {{ $fallback := $data.Get "fallback" }}
+    {{ $imgWidth := $data.Get "width" }}
+    {{ $imgHeight := $data.Get "height" }}
+
+    {{/* Link opcional para a imagem original */}}
+    <a href="{{ $src.RelPermalink }}" target="_blank" rel="noopener noreferrer"> {{/* <<< TAG <a> DE ABERTURA ADICIONADA */}}
+      <picture> {{/* <<< TAG <picture> DE ABERTURA ADICIONADA */}}
+        <source srcset="{{ $webp.RelPermalink }}" type="image/webp">
+        <img src="{{ $fallback.RelPermalink }}"
+             alt="{{ .Text }}"
+             loading="lazy"
+             decoding="async"
+             width="{{ $imgWidth }}"
+             height="{{ $imgHeight }}" />
+      </picture> {{/* <<< Tag de fechamento */}}
+    </a> {{/* <<< Tag de fechamento */}}
+
+    {{/* Legenda opcional */}}
+    {{ with .Title }}<figcaption style="text-align: center; font-size: 0.9em; color: var(--text-color); margin-top: 0.5em;">{{ . | markdownify }}</figcaption>{{ end }}
+  </figure>
+{{ else }}
+  {{/* Fallback se não for Page Resource */}}
+  <img src="{{ .Destination | safeURL }}" alt="{{ .Text }}" loading="lazy" />
+  <p style="color: red; font-size: small;">(Aviso: Imagem '{{ .Destination | safeURL }}' não é um Page Resource. Otimização não aplicada.)</p>
+{{ end }}

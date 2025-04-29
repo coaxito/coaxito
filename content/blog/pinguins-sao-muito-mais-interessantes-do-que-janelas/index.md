@@ -4,7 +4,7 @@ date = "2025-04-04T13:06:11-03:00"
 tags = ["tecnologia"]
 url = "/blog/pinguins-sao-muito-mais-interessantes-do-que-janelas/"
 description = "Pinguins são criaturinhas fascinantes — e, no mundo da tecnologia, eles deslizam para muito além do gelo. Do seu computador ao planeta Marte, o Linux está em todos os lugares, enquanto as janelas… bem, nem sempre são a melhor opção."
-images = ["/images/pinguins-sao-muito-mais-interessantes-do-que-janelas/pinguim-banhando-na-antartica.jpg"]
+images = ["pinguim_banhando_na_antartica.jpg"]
 author = "Breno Santana"
 +++
 
@@ -16,8 +16,7 @@ Tux é um pinguim rechonchudo que esbanja charme e elegância, facilmente reconh
 
 E, para deixar claro, eu não viveria sem janelas. Elas são indispensáveis, especialmente porque moro em um lugar muito quente.
 
-![Mão segura adesivo de pinguim "Tux", mascote do Linux, em foco. Fundo desfocado com árvores. Tons de preto, branco e laranja.](/images/pinguins-sao-muito-mais-interessantes-do-que-janelas/tux-o-pinguim-mascote-do-linux.jpg)
-Reprodução: [Real Tough Candy](https://www.pexels.com/pt-br/@realtoughcandy/)
+![Mão segura adesivo de pinguim "Tux", mascote do Linux, em foco. Fundo desfocado com árvores. Tons de preto, branco e laranja.](tux.jpg "Reprodução: Real Tough Candy")
 
 Minha produtividade ao usar distribuições Linux é inquestionavelmente melhor — tudo flui perfeitamente, com velocidade e eficiência.
 
@@ -33,8 +32,7 @@ Enquanto isso, no Windows, apesar do nome, janelas são a última coisa que cons
 
 Pinguins são animais limpinhos e higiênicos. Eles passam muito tempo se cuidando, alisando as penas com o bico e tomando banhos regularmente no mar gelado.
 
-![Pinguim mergulha na água entre icebergs brancos com detalhes azuis. A cena transmite ação e frio no ambiente antártico. ](/images/pinguins-sao-muito-mais-interessantes-do-que-janelas/pinguim-banhando-na-antartica.jpg)
-Reprodução: [Birger Strahl](https://unsplash.com/pt-br/@bist31)
+![Pinguim mergulha na água entre icebergs brancos com detalhes azuis. A cena transmite ação e frio no ambiente antártico.](pinguim_banhando_na_antartica.jpg "Reprodução: Birger Strahl")
 
 Janelas precisam de cuidado, e quando acumulam poeira, podem se tornar um grande problema — principalmente para alguém como eu, que sofre com alergias intensas.
 
@@ -50,8 +48,7 @@ Pinguins blindados, robustos como tanques de guerra, operando em servidores colo
 
 Seja nos servidores que hospedam os sites e plataformas que você acessa, no roteador que direcionou sua conexão ou até no sistema operacional do seu celular Android, há pinguins bem remunerados trabalhando nos bastidores.
 
-![Deserto ao entardecer com dunas e rochas sob céu estrelado. Tons quentes de laranja e vermelho criam um ambiente sereno e deslumbrante. Autor do texto quer que a imagem represente um cenário em marte.](/images/pinguins-sao-muito-mais-interessantes-do-que-janelas/paisagem-marciana.jpg)
-Reprodução: [Birger Strahl](https://unsplash.com/pt-br/@bist31)
+![Deserto ao entardecer com dunas e rochas sob céu estrelado. Tons quentes de laranja e vermelho criam um ambiente sereno e deslumbrante. Autor do texto quer que a imagem represente um cenário em marte.](paisagem_marciana.jpg "Reprodução: Danielle Colucci")
 
 E se isso já parece impressionante, saiba que eles foram além — para onde nenhum humano jamais pisou (pelo menos por enquanto).
 

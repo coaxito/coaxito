@@ -4,7 +4,7 @@ date = "2025-02-17T13:06:11-03:00"
 tags = ["poesia"]
 url = "/blog/begonias-aquarelas-e-as-estrelas-do-nosso-amor/"
 description = "Um texto sobre amor, saudade e transformações. Reflexões sobre o brilho das estrelas, a suavidade das aquarelas e a doçura de um encontro que mudou tudo."
-images = ["/images/begonias-aquarelas-e-as-estrelas-do-nosso-amor/paisagem-pastel.jpg"]
+images = ["paisagem_pastel.jpg"]
 author = "Breno Santana"
 +++
 
@@ -22,8 +22,7 @@ Toda a tristeza que afogava minha alma por tanto tempo se dissolveu no abraço d
 
 Percebemos quase de imediato que precisávamos um do outro, não apenas por um instante fugaz, mas por toda a eternidade — aquela que antes nos assombrava.
 
-![Flores begônias rosa-claro com centro amarelo, em destaque contra um fundo desfocado verde e cinza, criando uma sensação de calma e delicadeza.](/images/begonias-aquarelas-e-as-estrelas-do-nosso-amor/begonias-rosas.jpg)
-Reprodução: [Ivan Samudra](https://unsplash.com/pt-br/@ivandwisamudra)
+![Flores begônias rosa-claro com centro amarelo, em destaque contra um fundo desfocado verde e cinza, criando uma sensação de calma e delicadeza.](begonias_rosas.jpg "Reprodução: Ivan Samudra")
 
 ## Amor e saudades com perfume de flores
 
@@ -39,8 +38,7 @@ Fato é que temos a disposição para desvendar os segredos do mundo e viver int
 
 Estamos conectados pela arte, influenciados pela música, pela literatura, pela natureza e pelo vasto universo que se estende infinitamente acima de nossas cabeças.
 
-![Montanhas escuras ao fundo com um lago calmo em primeiro plano. Céu com tons pastéis rosa e azul, criando um ambiente tranquilo e sereno.](/images/begonias-aquarelas-e-as-estrelas-do-nosso-amor/paisagem-pastel.jpg)
-Reprodução: [Tyler Lastovich](https://unsplash.com/pt-br/@lastly)
+![Montanhas escuras ao fundo com um lago calmo em primeiro plano. Céu com tons pastéis rosa e azul, criando um ambiente tranquilo e sereno.](paisagem_pastel.jpg "Reprodução: Tyler Lastovich")
 
 ## Paisagens coloridas, singelas e serenas
 
@@ -56,8 +54,7 @@ Cuidar dela tornou-se meu propósito, pois, em sua felicidade, encontro a minha.
 
 A gente se entende tão bem, como se tivéssemos vivido incontáveis vidas no passado. E não há mistério no fim — até o último suspiro, estaremos lado a lado.
 
-![Montanhas nevadas sob céu estrelado com Via Láctea visível. O céu é azul e rosa, com meteoro à direita. Atmosfera serena.](/images/begonias-aquarelas-e-as-estrelas-do-nosso-amor/estrela-cadente.jpg)
-Reprodução: [Benjamin Voros](https://unsplash.com/pt-br/@vorosbenisop)
+![Montanhas nevadas sob céu estrelado com Via Láctea visível. O céu é azul e rosa, com meteoro à direita. Atmosfera serena.](estrela_cadente.jpg "Reprodução: Benjamin Voros")
 
 ## Do pináculo, contemplo teu brilho celestial
 

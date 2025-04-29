@@ -4,7 +4,7 @@ date = "2025-03-31T13:06:11-03:00"
 tags = ["musica"]
 url = "/blog/bacon-ovos-e-marmeladas-psicodelicas-do-pink-floyd/"
 description = "Alan's Psychedelic Breakfast é a despedida perfeita de Atom Heart Mother. Entre ovos fritos, bacon, cereais, marmelada e diálogos descontraídos, o Pink Floyd transforma paisagens sonoras de cafés da manhã em Los Angeles em uma experiência musical hipnotizante."
-images = ["/images/bacon-ovos-e-marmeladas-psicodelicas-do-pink-floyd/encarte_do_atom_heart_mother.jpg"]
+images = ["encarte_do_atom_heart_mother.jpg"]
 author = "Breno Santana"
 +++
 
@@ -16,8 +16,7 @@ Explorar a discografia completa da banda revela o perfeccionismo de seus membros
 
 Composições conceituais, letras filosóficas, técnicas inovadoras de estúdio, psicodelia e experimentação são apenas alguns dos elementos que definem o quarteto britânico.
 
-![Membros do Pink Floyd sentados em um banco, cobrindo o rosto com as mãos. Fundo com árvores. Imagem em preto e branco, clima descontraído.](/images/bacon-ovos-e-marmeladas-psicodelicas-do-pink-floyd/banda_reunida.jpg)
-Reprodução: [Pink Floyd](https://pinkfloyd.com)
+![Membros do Pink Floyd sentados em um banco, cobrindo o rosto com as mãos. Fundo com árvores. Imagem em preto e branco, clima descontraído.](banda_reunida.jpg "Reprodução: Pink Floyd")
 
 O conceito da faixa 'Alan's Psychedelic Breakfast' é relativamente simples, mas completamente inédito para a época.
 
@@ -39,8 +38,7 @@ Após circular pela cozinha, possivelmente pegando uma frigideira e alguns peda�
 
 Somando perfeitamente com a entrada elegante de Richard Wright com seu piano e órgão Hammond, cria uma atmosfera vibrante, marcada por melodias leves e descontraídas.
 
-![Richard Wright concentrado tocando seu teclado. Tons monocromáticos criam atmosfera introspectiva. Equipamento em segundo plano.](/images/bacon-ovos-e-marmeladas-psicodelicas-do-pink-floyd/richard_wright_no_estudio.jpg)
-Reprodução: [Jorgen Angel](https://www.angel.dk/)
+![Richard Wright concentrado tocando seu teclado. Tons monocromáticos criam atmosfera introspectiva. Equipamento em segundo plano.](richard_wright_no_estudio.jpg "Reprodução: Jorgen Angel")
 
 ## Sunny Side Up — Lado ensolarado para cima
 
@@ -54,8 +52,7 @@ A obra prossegue com uma sequência de sons cotidianos, como o de cereais sendo 
 
 Uma nova melodia emerge, marcada pela trilha de dois violões e uma guitarra de aço.
 
-![David Gilmour tocando guitarra de aço, concentrado, em preto e branco. Fundo escuro, foco em suas expressões calmas e instrumentos.](/images/bacon-ovos-e-marmeladas-psicodelicas-do-pink-floyd/david_gilmour_com_guitarra_steel.jpg)
-Reprodução: [Rock Archive](https://www.rockarchive.com/prints/p/pink-floyd-pf048jf/)
+![David Gilmour tocando guitarra de aço, concentrado, em preto e branco. Fundo escuro, foco em suas expressões calmas e instrumentos.](david_gilmour_com_guitarra_steel.jpg "Reprodução: Rock Archive")
 
 Enquanto nosso protagonista se entrega ao prazer matinal de saborear seu delicioso, caprichoso e psicodélico café da manhã.
 
@@ -83,8 +80,7 @@ Até que a atmosfera acelerada toma forma, crescendo em intensidade com os fabul
 
 Essa energia é intensificada por montagens e experimentações com fitas, incluindo as vozes de Alan em colagens caóticas e espaciais.
 
-![Estúdio de gravação em preto e branco. Roger Waters de suéter apoia a cabeça em uma mesa de som, aparentando cansaço. Outras pessoas ao fundo.](/images/bacon-ovos-e-marmeladas-psicodelicas-do-pink-floyd/roger_waters_no_estudio.jpg)
-Reprodução: [Rock Archive](https://www.rockarchive.com/prints/p/pink-floyd-pf009jf/)
+![Estúdio de gravação em preto e branco. Roger Waters de suéter apoia a cabeça em uma mesa de som, aparentando cansaço. Outras pessoas ao fundo.](roger_waters_no_estudio.jpg "Reprodução: Rock Archive")
 
 Em uma dança perfeita, a banda segue até o final com cada instrumento enriquecendo a atmosfera de forma extraordinária.
 
@@ -94,8 +90,7 @@ Por fim, Alan pega as suas chaves e despede-se da cozinha: “Minha cabeça est�
 
 Então, tranca a porta, vai embora e nos deixa apenas com o som da água terminando de escorrer rapidamente pelo ralo da pia.
 
-![Encarte do Atom Heart Mother do Pink Floyd, com vacas pastando em um campo gramado rodeado por árvores. O céu está nublado, criando uma atmosfera calma e serena. Imagem em preto e branco.](/images/bacon-ovos-e-marmeladas-psicodelicas-do-pink-floyd/encarte_do_atom_heart_mother.jpg)
-Reprodução: [Pink Floyd](https://pinkfloyd.com)
+![Encarte do Atom Heart Mother do Pink Floyd, com vacas pastando em um campo gramado rodeado por árvores. O céu está nublado, criando uma atmosfera calma e serena. Imagem em preto e branco.](encarte_do_atom_heart_mother.jpg "Reprodução: Pink Floyd")
 
 É curioso observar que, Alan não fechou completamente a torneira da cozinha, e as mesmas gotas que ouvimos no início da obra podem ser ouvidas novamente.
 
@@ -111,8 +106,7 @@ Ele desempenhava o papel de gerente de turnê (ou roadie manager), encarregado d
 
 Também costumava preparar o café da manhã do grupo, gerando conversas descontraídas enquanto dividiam a refeição.
 
-![Alan Styles e Syd Barret conversam na rua, Style usa casaco longo, o Barret tem cabelo desgrenhado. Fundo com prédio britânico e cerca de ferro. Foto P&B.](/images/bacon-ovos-e-marmeladas-psicodelicas-do-pink-floyd/alan_styles_e_syd_barret.jpg)
-Reprodução: [Pink Floyd](https://pinkfloyd.com)
+![Alan Styles e Syd Barret conversam na rua, Style usa casaco longo, o Barret tem cabelo desgrenhado. Fundo com prédio britânico e cerca de ferro. Foto P&B.](alan_styles_e_syd_barret.jpg "Reprodução: Pink Floyd")
 
 Durante as gravações de Atom Heart Mother, o quarteto decidiu imortalizar seu ritual matinal.
 

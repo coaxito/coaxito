@@ -1,7 +1,5 @@
 {{/* Importa a fonte Literata */}}
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Literata:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 
 {{/* Link para Auto-Descoberta do Feed RSS (Adicionado Aqui) */}}
 {{ range .AlternativeOutputFormats -}}
@@ -10,5 +8,9 @@
 {{ with .OutputFormats.Get "RSS" -}}
   {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
 {{ end -}}
+
+<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
 
 {{/* Este arquivo pode ser usado no futuro para adicionar outras meta tags, links ou scripts na head */}}

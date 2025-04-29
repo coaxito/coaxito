@@ -4,7 +4,7 @@ date = "2025-01-31T13:06:11-03:00"
 tags = ["musica"]
 url = "/blog/plantasia-encanta-com-sua-filosofia-e-misticismo/"
 description = "Plantasia é um disco de 1976 criado para plantas e aqueles que às amam, misturando sintetizadores, misticismo e uma conexão única e aconchegante com a natureza."
-images = ["/images/plantasia-encanta-com-sua-filosofia-e-misticismo/arte-do-plantasia.jpg"]
+images = ["arte_do_plantasia.jpg"]
 author = "Breno Santana"
 +++
 
@@ -16,8 +16,7 @@ Seu conceito único nasceu do crescente fascínio pelo comportamento das plantas
 
 Mort Garson foi um dos pioneiros da música eletrônica e do extraordinário sintetizador Moog, criando algumas das atmosferas mais impressionantes e místicas da história.
 
-![Dois discos em vinil de "Plantasia" com ilustração de planta e figuras abraçando-a. Texto "Mother Earth's", fundo de cortiça, sensação acolhedora.](/images/plantasia-encanta-com-sua-filosofia-e-misticismo/vinil-do-plantasia.jpg)
-Reprodução: [Drift Records](https://driftrecords.com/blogs/drift/drift-sunday-classic-mort-garson-mother-earth-s-plantasia)
+![Dois discos em vinil de "Plantasia" com ilustração de planta e figuras abraçando-a. Texto "Mother Earth's", fundo de cortiça, sensação acolhedora.](vinil_do_plantasia.jpg "Reprodução: Drift Records")
 
 A distribuição deste disco em 1976 tem uma história curiosa — e, como não poderia ser diferente, tem tudo a ver com plantas.
 
@@ -33,8 +32,7 @@ No entanto, isso em nada desvaloriza a qualidade extraordinária da obra. As mú
 
 A introdução do disco é um grande espetáculo, e o desenrolar das faixas é místico, etéreo e futurista. Criando uma conexão profunda com a natureza, onde quer que você esteja.
 
-![Guia completo de cuidados da Mother Earth's Plant Boutique: página de revista sobre plantas, com ilustração de filodendro e texto "Rhapsody in Green". Fundo de madeira clara. Emotivo e informativo.](/images/plantasia-encanta-com-sua-filosofia-e-misticismo/encarte-do-plantasia.jpg)
-Reprodução: [Drift Records](https://driftrecords.com/blogs/drift/drift-sunday-classic-mort-garson-mother-earth-s-plantasia)
+![Guia completo de cuidados da Mother Earth's Plant Boutique: página de revista sobre plantas, com ilustração de filodendro e texto "Rhapsody in Green". Fundo de madeira clara. Emotivo e informativo.](encarte_do_plantasia.jpg "Reprodução: Drift Records")
 
 As composições prestam homenagem a diversas plantas domésticas populares, como a clorofito, violeta-africana, begônia, filodendro, lírio-da-paz, samambaia e espada-de-são-jorge, por meio de concertos eletrizantes e melodias sintetizadas.
 
@@ -50,8 +48,7 @@ O disco foi relançado em junho de 2019, pela gravadora independente Sacred Bone
 
 Não posso negar que sonho com um futuro em que as plantas possam falar e, com muita gentileza, nos peçam para tocar esse disco para acalmá-las durante o frio do inverno.
 
-![Ilustração do álbum Plantasia do Mort Garson: desenho de uma planta grande com folhas verdes e uma figura sorridente sentada no vaso. Fundo branco, transmitindo tranquilidade.](/images/plantasia-encanta-com-sua-filosofia-e-misticismo/arte-do-plantasia.jpg)
-Reprodução: [Marvin Rubin](https://driftrecords.com/blogs/drift/drift-sunday-classic-mort-garson-mother-earth-s-plantasia)
+![Ilustração do álbum Plantasia do Mort Garson: desenho de uma planta grande com folhas verdes e uma figura sorridente sentada no vaso. Fundo branco, transmitindo tranquilidade.](arte_do_plantasia.jpg "Reprodução: Marvin Rubin")
 
 Permita-se vivenciar o misticismo de Plantasia em uma jornada leve, acolhedora e serena, envolta pelo aroma das folhas verdes e pelo som suave de um riacho ou da chuva.
 

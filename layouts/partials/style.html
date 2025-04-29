@@ -283,4 +283,25 @@ main ul li a {
 
 } /* --- Fim da Media Query --- */
 
+figure {
+  margin: 1.5em 0; /* Espaçamento vertical padrão para figuras */
+  padding: 0;
+}
+
+figure img,
+figure picture { /* Aplica a imagens dentro de figure e ao picture */
+  max-width: 100%; /* Garante que não ultrapasse o container */
+  height: auto;    /* Mantém a proporção ao redimensionar a largura */
+  display: block;  /* Evita espaço extra abaixo da imagem */
+  margin-left: auto; /* Centraliza se a figura for mais larga */
+  margin-right: auto;
+}
+
+figure figcaption {
+  text-align: center;
+  font-size: 0.9em;
+  color: var(--text-color);
+  margin-top: 0.5em;
+}
+
 </style>
