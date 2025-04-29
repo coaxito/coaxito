@@ -1,8 +1,11 @@
 +++
 title = "Bacon, ovos e marmeladas psicodélicas do Pink Floyd"
 date = "2025-03-31T13:06:11-03:00"
-tags = []
+tags = ["musica"]
 url = "/blog/bacon-ovos-e-marmeladas-psicodelicas-do-pink-floyd/"
+description = "Alan's Psychedelic Breakfast é a despedida perfeita de Atom Heart Mother. Entre ovos fritos, bacon, cereais, marmelada e diálogos descontraídos, o Pink Floyd transforma paisagens sonoras de cafés da manhã em Los Angeles em uma experiência musical hipnotizante."
+images = ["/images/bacon-ovos-e-marmeladas-psicodelicas-do-pink-floyd/encarte_do_atom_heart_mother.jpg"]
+author = "Breno Santana"
 +++
 
 ## Talheres à mesa, é hora de tomar café
@@ -100,7 +103,7 @@ O que gera um looping perfeito, permitindo-nos mergulhar infinitamente neste cic
 
 Essa ideia criativa pode simbolizar o início de um novo dia, com mais um café da manhã psicodélico à espera de ser preparado.
 
-## A importância de Alan Styles para o Pink Floyd
+## A importância de Alan Styles
 
 Para quem ficou curioso sobre o protagonista da história, o apreciador de cafés da manhã é o Alan Styles (à esquerda, na foto abaixo).
 

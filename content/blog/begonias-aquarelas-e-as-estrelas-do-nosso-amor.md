@@ -1,8 +1,11 @@
 +++
 title = "Begônias, aquarelas e as estrelas do nosso amor"
 date = "2025-02-17T13:06:11-03:00"
-tags = []
+tags = ["poesia"]
 url = "/blog/begonias-aquarelas-e-as-estrelas-do-nosso-amor/"
+description = "Um texto sobre amor, saudade e transformações. Reflexões sobre o brilho das estrelas, a suavidade das aquarelas e a doçura de um encontro que mudou tudo."
+images = ["/images/begonias-aquarelas-e-as-estrelas-do-nosso-amor/paisagem-pastel.jpg"]
+author = "Breno Santana"
 +++
 
 ## Um abrigo quentinho para meu coração

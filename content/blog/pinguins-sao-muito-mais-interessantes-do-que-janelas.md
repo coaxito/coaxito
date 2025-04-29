@@ -1,8 +1,11 @@
 +++
 title = "Pinguins são muito mais interessantes do que janelas"
 date = "2025-04-04T13:06:11-03:00"
-tags = []
+tags = ["tecnologia"]
 url = "/blog/pinguins-sao-muito-mais-interessantes-do-que-janelas/"
+description = "Pinguins são criaturinhas fascinantes — e, no mundo da tecnologia, eles deslizam para muito além do gelo. Do seu computador ao planeta Marte, o Linux está em todos os lugares, enquanto as janelas… bem, nem sempre são a melhor opção."
+images = ["/images/pinguins-sao-muito-mais-interessantes-do-que-janelas/pinguim-banhando-na-antartica.jpg"]
+author = "Breno Santana"
 +++
 
 ## Era uma vez um pinguim carismático...
@@ -53,5 +56,5 @@ Reprodução: [Birger Strahl](https://unsplash.com/pt-br/@bist31)
 E se isso já parece impressionante, saiba que eles foram além — para onde nenhum humano jamais pisou (pelo menos por enquanto).
 
 O helicóptero Ingenuity, que voa sobre o solo marciano ao lado do rover Perseverance, opera com um sistema baseado em Linux.
-ao
+
 Em meio ao frio extremo e à atmosfera rarefeita, lá estão eles, provando que pinguins podem sim voar — pelo menos no espaço.

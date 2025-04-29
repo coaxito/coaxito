@@ -2,8 +2,8 @@
   :root {
     /* --- Variáveis Globais e Paleta Light Mode --- */
     --width: 720px;
-    --font-main: 'Roboto Slab', sans-serif;
-    --font-secondary: 'Roboto Slab', sans-serif;
+    --font-main: 'Literata', sans-serif;
+    --font-secondary: 'Literata', sans-serif;
     --font-scale: 1em;
 
     /* Cores Confortáveis (Light) */
@@ -22,7 +22,7 @@
       /* --- Paleta Dark Mode --- */
       --background-color: #212529; /* Cinza muito escuro (Off-black) */
       --heading-color: #f1f1f1;    /* Cinza muito claro (Off-white) */
-      --text-color: #cccccc;       /* Cinza claro para texto */
+      --text-color: #fafafa;       /* Cinza claro para texto */
       --link-color: #7ab8e7;       /* Azul claro e suave (cor padrão de link no dark) */
       --visited-color: var(--link-color); /* MODIFICADO: Visitados usam a cor normal do link */
       --code-background-color: #343a40; /* Cinza escuro (ligeiramente diferente do fundo) */
@@ -71,7 +71,7 @@
   h2 {
     font-family: var(--font-main);
     color: var(--heading-color);
-    font-size: 1.1em;
+    font-size: 1em;
     margin-top: 1.25em;
     margin-bottom: 0.6em;
   }
@@ -98,12 +98,13 @@
     text-decoration: none;
   }
   
-   p { /* Estilo padrão para TODOS os links */
-   font-family: var(--font-main);
-    color: var(--heading-color);
-    font-size: 1em;
-    margin-top: 1.1em;
-    margin-bottom: 0.5em;
+   p {
+  color: var(--text-color);
+  font-size: 1em;
+  margin-top: 0;       /* Opcional: Zerar margem superior para consistência */
+  margin-bottom: 1.5em;  /* <<< Aumentado de 0.5em para 1em. Ajuste este valor (ex: 0.8em, 1.2em) */
+  line-height: inherit; /* Garante que herde a altura de linha do body */
+}
   }
 
   /* (Implicitamente, a:visited agora também usa var(--link-color) por causa da variável) */
@@ -188,7 +189,7 @@ header {
 /* Estilos para o PARÁGRAFO (<p>) que envolve o título do site */
 header p.site-title { /* Seletor focado no <p> com a classe */
   font-family: var(--font-main);
-  font-size: 1.6em;        /* Tamanho que você ajustou */
+  font-size: 1.5em;        /* Tamanho que você ajustou */
   font-weight: bold;       /* Negrito */
   margin: 0;               /* Sem margens extras no parágrafo */
   line-height: 1.2;
@@ -250,21 +251,36 @@ header a.title:hover {     /* <<< SELETOR CORRIGIDO para o hover */
     /* justify-content: space-between; */
 }
 
+/* Estilo BASE para os links de título na lista */
+main ul li a {
+    color: var(--heading-color); /* Define a cor padrão (light mode) como a cor do cabeçalho (off-black) */
+    /* Se quiser um tamanho de fonte específico para esses links, adicione aqui: */
+    /* font-size: 1.1em; */
+}
+
   main ul li span { /* Span da Data */
     flex: 0 0 100px;   /* Reserva um espaço fixo de 100px para a data. */
     text-align: right;
-    margin-left: 1em; 
-    font-size: 0.8em;
- */
-  }
+    margin-left: 1em;
+    font-size: 0.8em;  /* Ajustado para o tamanho menor */
+  } /*
 
   /* --- Media Query para Telas Pequenas (Celulares) --- */
-  @media (max-width: 767px) {
-    main ul li a {
-      max-width: 75%; /* Link do título não ocupa mais que 75% */
-    }
-    /* Opcional: Reduzir espaço da data em telas pequenas */
-    /* main ul li span { flex-basis: 80px; } */
-  } /* --- Fim da Media Query --- */
+@media (max-width: 767px) {
+
+  /* Regra existente para links da lista */
+  main ul li a {
+    max-width: 60%;
+  }
+
+  /* Regra NOVA para o H1 do post */
+  main article h1 {
+    max-width: 80%; /* Limita H1 a 80% da largura do container. Ajuste se necessário. */
+  }
+
+  /* Opcional: Reduzir espaço da data em telas pequenas */
+  /* main ul li span { flex-basis: 80px; } */
+
+} /* --- Fim da Media Query --- */
 
 </style>

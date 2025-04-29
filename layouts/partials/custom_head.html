@@ -1,6 +1,14 @@
-{{/* Importa a fonte Roboto Slab */}}
+{{/* Importa a fonte Literata */}}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+
+{{/* Link para Auto-Descoberta do Feed RSS (Adicionado Aqui) */}}
+{{ range .AlternativeOutputFormats -}}
+  {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+{{ end -}}
+{{ with .OutputFormats.Get "RSS" -}}
+  {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+{{ end -}}
 
 {{/* Este arquivo pode ser usado no futuro para adicionar outras meta tags, links ou scripts na head */}}

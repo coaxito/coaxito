@@ -1,8 +1,11 @@
 +++
 title = "Plantasia encanta com sua filosofia e misticismo"
 date = "2025-01-31T13:06:11-03:00"
-tags = []
+tags = ["musica"]
 url = "/blog/plantasia-encanta-com-sua-filosofia-e-misticismo/"
+description = "Plantasia é um disco de 1976 criado para plantas e aqueles que às amam, misturando sintetizadores, misticismo e uma conexão única e aconchegante com a natureza."
+images = ["/images/plantasia-encanta-com-sua-filosofia-e-misticismo/arte-do-plantasia.jpg"]
+author = "Breno Santana"
 +++
 
 ## O presente perfeito para as suas plantas
