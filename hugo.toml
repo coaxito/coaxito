@@ -24,11 +24,11 @@ ignoreErrors = ["error-disable-taxonomy"]
 
 [params]
   # The "description" of your website. This is used in the meta data of your generated html.
-  description = "Meu nome é chamo Breno Santana, mas você também pode me chamar de Coaxito. Esse blog daqui é o meu cantinho digital aconchegante. Nas horas vagas, me dedico a escrever no meu sobre música, tecnologia e internet. Também sou fotógrafo, web designer e artista independente de folk e música ambiente."
+  description = "Me chamo Breno Santana (21). Meu principal hobby é escrever sobre música, tecnologia, internet e outros tópicos pessoais. Também sou fotógrafo, designer gráfico e artista independente de folk e música ambiente."
 
   # The path to your "favicon". This should be a square (at least 32px x 32px) png-file.
   # Hint: It's good practise to also put a "favicon.ico"-file into your "static"-folder.
-  favicon = "favicon.png"
+  favicon = ["favicon.png"]
 
   # These "images" are used for the structured data templates. This will show up, when
   # services like Twitter or Slack want to generate a preview of a link to your site.
