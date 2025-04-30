@@ -20,4 +20,46 @@
 {{/* Link para Flaticon Uicons - TODOS os estilos */}}
 <link href='https://cdn.jsdelivr.net/npm/@flaticon/flaticon-uicons@3.3.1/css/all/all.min.css' rel='stylesheet'>
 
+{{/* ===== Open Graph Image para a Homepage ===== */}}
+{{ if .IsHome }}
+  {{ $imagePath := "images/og-imagem-home.jpg" }} {{/* <== CONFIRME O CAMINHO E NOME DA SUA IMAGEM DENTRO DE 'static' */}}
+  {{ $imageURL := absURL $imagePath }} {{/* Gera a URL absoluta assumindo que a imagem está em /static */}}
+
+  {{/* Verifica se a URL foi gerada corretamente (não está vazia ou só "/") */}}
+  {{ if and $imageURL (ne $imageURL "/") }}
+    <meta property="og:image" content="{{ $imageURL }}" />
+    <meta property="og:image:secure_url" content="{{ $imageURL }}" />
+
+    {{/* Tenta obter dados da imagem (tipo, dimensões) APENAS se ela for um Recurso E estivermos em modo Produção */}}
+    {{ if hugo.IsProduction }}
+      {{ with resources.Get $imagePath }} {{/* Tenta pegar a imagem como Recurso */}}
+        <meta property="og:image:type" content="{{ .MediaType.Type }}" />
+        <meta property="og:image:width" content="{{ .Width }}" />
+        <meta property="og:image:height" content="{{ .Height }}" />
+      {{ else }}
+         {{/* Fallback Opcional: Se não for Recurso, pode adicionar dimensões fixas se souber */}}
+         {{/* <meta property="og:image:type" content="image/jpeg" /> */}}
+         <meta property="og:image:width" content="1200" />
+         <meta property="og:image:height" content="630" />
+      {{ end }}
+    {{ else }}
+       {{/* Fallback Opcional fora de produção: Adicionar dimensões fixas se souber */}}
+       <meta property="og:image:width" content="1200" />
+       <meta property="og:image:height" content="630" />
+    {{ end }}
+
+    <meta property="og:image:alt" content="Imagem de pré-visualização do Breno's Blog" /> {{/* <== MUDE A DESCRIÇÃO */}}
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="{{ $imageURL }}" />
+    <meta name="twitter:image:alt" content="Imagem de pré-visualização do Breno's Blog" /> {{/* <== MUDE A DESCRIÇÃO */}}
+  {{ end }}
+{{ end }}
+{{/* ===== Fim Open Graph Image Homepage ===== */}}
+
+
+{{/* Link para Flaticon Uicons - TODOS os estilos */}}
+<link href='https://cdn.jsdelivr.net/npm/@flaticon/flaticon-uicons@3.3.1/css/all/all.min.css' rel='stylesheet'>
+
+{{/* Este arquivo pode ser usado no futuro para adicionar outras meta tags, links ou scripts na head */}}
+
 {{/* Este arquivo pode ser usado no futuro para adicionar outras meta tags, links ou scripts na head */}}
