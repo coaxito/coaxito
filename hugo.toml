@@ -24,7 +24,7 @@ ignoreErrors = ["error-disable-taxonomy"]
 
 [params]
   # Descrição curta para meta tags SEO e previews (Idealmente < 160 caracteres)
-  description = "Blog pessoal de Breno Santana, sobre música, tecnologia, internet, fotografia e outros tópicos pessoais." # << SUGESTÃO de versão mais curta
+  description = "Blog pessoal de Breno Santana, onde ele escreve sobre música, tecnologia, internet, fotografia e outros tópicos pessoais." # << SUGESTÃO de versão mais curta
 
   # O parâmetro favicon provavelmente não é mais necessário após usar RealFaviconGenerator
   # favicon = ["favicon.png"] # << COMENTADO/REMOVIDO - Controle agora está em custom_head.html
