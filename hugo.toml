@@ -8,7 +8,8 @@ theme = 'hugo-bearblog' # << Base theme, pode ser removido se você copiou todo 
 # Basic metadata configuration for your blog.
 title = "Breno's Blog"
 author = "Breno Santana"
-# copyright = "Copyright © 2025, Breno Santana de Souza" # << REMOVIDO - Recomenda-se tratar o ano dinamicamente no footer.html
+copyright = "Copyright © Breno Santana de Souza"
+email = "breno@coaxito.com"
 languageCode = "pt-br"
 defaultContentLanguage = "pt-br"
 

@@ -1,0 +1,54 @@
+{{- /* layouts/_default/rss.xml */ -}}
+{{- $feedTitle := "Artigos do Breno's Blog" -}}
+{{- $feedDesc := "Leia os artigos recém-publicados no meu blog pessoal. Descubra minhas opiniões, observações, comentários sobre música, tecnologia, internet e muito mais." -}}
+{{- $feedImagePath := "/xml.png" -}}
+{{- $feedImageURL := absURL $feedImagePath -}}
+
+{{- printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?>" | safeHTML -}}
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>{{ $feedTitle }}</title>
+    <link>{{ .Permalink }}</link>
+    <description>{{ $feedDesc }}</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>{{ .Site.LanguageCode | default "pt-br" }}</language>
+    {{ with .Site.Author.email -}}<managingEditor>{{.}}{{ with $.Site.Author.name }} ({{.}}){{end}}</managingEditor>{{end}}
+    {{ with .Site.Author.email -}}<webMaster>{{.}}{{ with $.Site.Author.name }} ({{.}}){{end}}</webMaster>{{end}}
+    {{ with .Site.Copyright -}}<copyright>{{ . }}</copyright>{{end}}
+    {{/* CORRIGIDO: Usa .Site.Lastmod */}}
+    {{ with .Site.Lastmod -}}<lastBuildDate>{{ .Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</lastBuildDate>{{end}}
+    {{ with .OutputFormats.Get "RSS" -}}
+      {{ printf "<atom:link href=%q rel=\"self\" type=%q />" .Permalink .MediaType.Type | safeHTML }}
+    {{ end -}}
+
+    {{/* Adiciona a Imagem do Canal RSS */}}
+    {{ if $feedImageURL }}
+    <image>
+      <url>{{ $feedImageURL }}</url>
+      <title>{{ $feedTitle }}</title>
+      <link>{{ $.Permalink }}</link>
+    </image>
+    {{ end }}
+
+    {{/* Lista os posts regulares, aplicando limite SE definido em hugo.toml e >= 1 */}}
+    {{- $pages := .Site.RegularPages -}}
+    {{- with .Site.Config.Services.RSS.Limit -}} {{/* Só entra aqui se o limite estiver definido no hugo.toml */}}
+      {{- if ge . 1 -}} {{/* Verifica se o limite é 1 ou maior */}}
+        {{- $pages = $pages | first . -}} {{/* Aplica o limite usando '.' que é o valor do limite aqui */}}
+      {{- end -}}
+    {{- end -}}
+    {{ range $pages }}
+      {{ if not .Params.private }} {{/* Pula posts privados */}}
+      <item>
+        <title>{{ .Title }}</title>
+        <link>{{ .Permalink }}</link>
+        <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</pubDate>
+        {{/* CORRIGIDO: Contexto '$' para acessar .Site dentro do range */}}
+        {{ with $.Site.Author.email -}}<author>{{.}}{{ with $.Site.Author.name }} ({{.}}){{end}}</author>{{end}}
+        <guid>{{ .Permalink }}</guid>
+        <description>{{ .Summary | plainify | htmlUnescape }}</description>
+      </item>
+      {{ end }}
+    {{ end }}
+  </channel>
+</rss>
