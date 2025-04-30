@@ -9,4 +9,4 @@ Meu principal hobby é escrever sobre música, tecnologia, internet e outros tó
 
 Também sou fotógrafo, designer gráfico e artista independente de folk e música ambiente.
 
-Entre sem bater, aconchegue-se e explore à vontade. Se quiser conversar, não deixe de enviar um [e-mail](mailto:breno@coaxito.com) ou mensagem privada pelo [Signal](/https://signal.me/#eu/JlXRcst4vpj8540jixOyvLeXl0GtauK-FWZ9rf-xoHI38AzOkxVLELnGyA5gt-z5).
+Entre sem bater, aconchegue-se e explore à vontade. Se quiser conversar, não deixe de enviar um [e-mail](mailto:breno@coaxito.com) ou mensagem privada pelo [Signal](https://signal.me/#eu/YGT5NxLnek0_hkaapo3XbU8iYTTscESW9n5Mka3NCJQXZ-HlkEBLXopDW_DN16Iz).
