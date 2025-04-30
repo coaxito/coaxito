@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+{{/* Tag HTML simples, sem o script inline aqui */}}
+<html lang="{{ site.LanguageCode | default " pt-br" }}">
+
+<head>
+  {{/* VVV SCRIPT INLINE MOVIDO PARA O INÍCIO DO HEAD VVV */}}
+  <script>
+    // Aplica tema inicial (light/dark/leaf/cake) o mais cedo possível para evitar 'piscar' // <<-- Comentário Atualizado
+    (function() {
+      const LSTORAGE_KEY = 'color-theme'; // Mesma chave do theme-toggle.js
+      // Nomes dos temas (Strings)
+      const THEME_LIGHT = 'light';
+      const THEME_DARK = 'dark';
+      const THEME_LEAF = 'leaf';     // <<-- CORRIGIDO/PADRONIZADO
+      const THEME_CAKE = 'cake';     // <<-- ADICIONADO
+      // Nomes das classes CSS
+      const CLASS_LIGHT = 'light';
+      const CLASS_DARK = 'dark';
+      const CLASS_LEAF = 'leaf';     // <<-- CORRIGIDO/PADRONIZADO
+      const CLASS_CAKE = 'cake';     // <<-- ADICIONADO
+
+      let theme = THEME_LIGHT; // Default para light
+
+      try {
+        const stored = localStorage.getItem(LSTORAGE_KEY);
+        // Verifica se o tema salvo é um dos QUATRO válidos // <<-- LÓGICA ATUALIZADA
+        if ([THEME_LIGHT, THEME_DARK, THEME_LEAF, THEME_CAKE].includes(stored)) { // <<-- ATUALIZADO
+          theme = stored; // Usa tema salvo se existir
+        } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          theme = THEME_DARK; // Senão, usa preferência do OS (apenas para dark)
+        }
+      } catch (e) { /* Ignora erros de localStorage/matchMedia */ }
+
+      // Aplica a classe no elemento raiz <html> // <<-- LÓGICA ATUALIZADA PARA 4 TEMAS
+      if (theme === THEME_DARK) {
+        if (!document.documentElement.classList.contains(CLASS_DARK)) document.documentElement.classList.add(CLASS_DARK);
+        document.documentElement.classList.remove(CLASS_LIGHT, CLASS_LEAF, CLASS_CAKE); // <<-- Remove todas as outras
+      } else if (theme === THEME_LEAF) { // <<-- CORRIGIDO/PADRONIZADO
+        if (!document.documentElement.classList.contains(CLASS_LEAF)) document.documentElement.classList.add(CLASS_LEAF);
+        document.documentElement.classList.remove(CLASS_LIGHT, CLASS_DARK, CLASS_CAKE); // <<-- Remove todas as outras
+      } else if (theme === THEME_CAKE) { // <<-- BLOCO ADICIONADO
+         if (!document.documentElement.classList.contains(CLASS_CAKE)) document.documentElement.classList.add(CLASS_CAKE);
+         document.documentElement.classList.remove(CLASS_LIGHT, CLASS_DARK, CLASS_LEAF); // <<-- Remove todas as outras
+      } else { // Tema é Light
+        if (!document.documentElement.classList.contains(CLASS_LIGHT)) document.documentElement.classList.add(CLASS_LIGHT);
+        document.documentElement.classList.remove(CLASS_DARK, CLASS_LEAF, CLASS_CAKE); // <<-- Remove todas as outras
+      }
+    })();
+  </script>
+  {{/* ^^^ Fim do script inline de tema inicial ^^^ */}}
+
+  <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>{{- block "title" . }}{{ with .Title }}{{ . }} | {{ end }}{{ .Site.Title }}{{- end }}</title>
+
+  {{- partial "seo_tags.html" . -}}
+  <meta name="referrer" content="no-referrer-when-downgrade" />
+
+  {{/* CSS Principal - Carregado DEPOIS do script inicial */}}
+  {{- partial "style.html" . -}}
+
+  {{/* Conteúdo customizado da Head (Fontes, RSS, Favicons, etc) */}}
+  {{- partial "custom_head.html" . -}}
+
+</head>
+
+<body> {{/* Tag body normal */}}
+  <header>
+    {{- partial "header.html" . -}}
+  </header>
+  <main>
+    {{- block "main" . }}{{- end }}
+  </main>
+  <footer>
+    {{- partial "footer.html" . -}}
+  </footer>
+
+  {{/* Conteúdo customizado antes do fim do body */}}
+  {{- partial "custom_body.html" . -}}
+
+  {{/* Script principal para troca de tema (deferido) */}}
+  <script defer src="{{ "/js/theme-toggle.js" | relURL }}"></script> {{/* Este precisará ser atualizado também */}}
+
+</body> {{/* Tag body final ÚNICA */}}
+</html> {{/* Tag html final ÚNICA */}}

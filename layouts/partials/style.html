@@ -6,45 +6,87 @@
     --font-secondary: 'Literata', sans-serif;
     --font-scale: 1em;
 
-    /* Cores Confortáveis (Light) - MODIFICADO */
-    --background-color: #E0E0E0; /* Cinza bem claro (fundo) */
-    --heading-color: #121212;    /* Preto bem escuro (títulos) */
-    --text-color: #121212;       /* Preto bem escuro (texto) */
-    --link-color: #0056b3;
+    /* Cores Confortáveis (Light) - Seus Ajustes */
+    --background-color: #ede7e3;
+    --heading-color: #141313;
+    --text-color: #141313;
+    --link-color: #171006;
     --visited-color: var(--link-color);
-    --code-background-color: #f0f0f0;
+    --code-background-color: #ede7e3;
     --code-color: #2a2a2a;
-    --blockquote-color: #4d4d4d;
+    --blockquote-color: var(--link-color);
   }
 
+  /* --- Tema Escuro (Definição via Classe) --- */
+  html.dark {
+    --background-color: #1a1a1a; /* Seu Ajuste */
+    --heading-color: #e5e3e1;    /* Seu Ajuste */
+    --text-color: #e5e3e1;       /* Seu Ajuste */
+    --link-color: #d6d5d3;
+    --visited-color: var(--link-color);
+    --code-background-color: #1a1a1a;
+    --code-color: #cccccc;
+    --blockquote-color: var(--link-color); /* <<-- CORREÇÃO AQUI (removido # e ; extra) */
+  }
+
+/* --- Tema leaf (Definição via Classe) --- */
+ html.leaf {
+   --background-color: #FFFDF6; /* <<-- Corrigido */
+   --heading-color: #626F47;     /* <<-- Corrigido */
+   --text-color: #626F47;        /* <<-- Corrigido */
+   --link-color: #A0C878;        /* <<-- Corrigido */
+   --visited-color: var(--link-color);
+   --code-background-color: #FFFDF6;
+   --code-color: #264653;
+   --blockquote-color: #2a9d8f;
+ }
+ 
+/* --- Tema Cake (Definição via Classe) --- */
+html.cake {
+  --background-color: #FEF3E2; /* Ex: LavenderBlush (rosa bem claro) */
+  --heading-color:    #874356; /* Ex: SaddleBrown (marrom escuro) */
+  --text-color:       #874356; /* Ex: Sienna (marrom) */
+  --link-color:       #C65D7B; /* Ex: HotPink */
+  --visited-color:    var(--link-color);
+  --code-background-color: #FAEBD7; /* Ex: AntiqueWhite */
+  --code-color:       #8B4513; /* Ex: SaddleBrown */
+  --blockquote-color: #A0522D; /* Ex: Sienna */
+}
+}
+
+  /* Aplica cores escuras baseado na preferência do Sistema (como padrão inicial) */
+  /* Evita aplicar se o usuário escolheu light manualmente (classe .light ou .leaf) */
+ @media (prefers-color-scheme: dark) {
+  html:not(.light):not(.leaf):not(.cake) { /* <<-- ADICIONADO :not(.cake) */
+    /* ... variáveis de cor do tema dark aqui ... */
+    /* (Mantive as correções que fiz antes aqui também) */
+    --background-color: #1a1a1a;
+    --heading-color: #e5e3e1;
+    --text-color: #e5e3e1;
+    --link-color: #d6d5d3;
+    --visited-color: var(--link-color);
+    --code-background-color: #1a1a1a;
+    --code-color: #cccccc; /* Corrigido de #1a1a1a */
+    --blockquote-color: var(--link-color);
+  }
+}
+
+  /* --- Regras Específicas que só valem no modo escuro --- */
+  /* (Pode querer adicionar regras para .leaf também se necessário) */
+  html.dark main ul li a,
+  html.dark main ul li a:visited {
+      color: var(--heading-color);
+  }
   @media (prefers-color-scheme: dark) {
-    :root {
-      /* --- Paleta Dark Mode - MODIFICADO */
-      --background-color: #121212; /* Preto bem escuro (fundo) */
-      --heading-color: #E0E0E0;    /* Cinza bem claro (títulos) */
-      --text-color: #E0E0E0;       /* Cinza bem claro (texto) */
-      --link-color: #7ab8e7;
-      --visited-color: var(--link-color);
-      --code-background-color: #343a40;
-      --code-color: #cccccc;
-      --blockquote-color: #cccccc;
+    html:not(.light):not(.leaf) main ul li a, /* <<-- CORREÇÃO AQUI */
+    html:not(.light):not(.leaf) main ul li a:visited { /* <<-- CORREÇÃO AQUI */
+        color: var(--heading-color);
     }
+  }
+  /* --- Fim das regras específicas do Dark Mode --- */
 
-    /* --- Regras Específicas do Dark Mode --- */
 
-    /* Define a cor dos links dos títulos das postagens no modo escuro */
-    main ul li a {
-      color: var(--heading-color); /* Usa a cor 'off-white' dos títulos (#f1f1f1) */
-    }
-
-    /* Define a cor dos links VISITADOS dos títulos também no modo escuro */
-    main ul li a:visited {
-      color: var(--heading-color); /* Mesma cor para manter a consistência */
-    }
-
-  } /* --- Fim do @media (prefers-color-scheme: dark) --- */
-
-  /* --- Regras CSS Gerais (Aplicáveis a ambos os modos) --- */
+  /* --- Regras CSS Gerais --- */
   body {
     font-family: var(--font-secondary);
     font-size: var(--font-scale);
@@ -55,260 +97,186 @@
     background-color: var(--background-color);
     word-wrap: break-word;
     overflow-wrap: break-word;
-    line-height: 1.5;
+    line-height: 1.6;
     color: var(--text-color);
+    transition: background-color 0.2s ease, color 0.2s ease;
   }
 
-  /* --- Estilos Individuais para Cabeçalhos H1, H2, H3 (Separados) --- */
-  h1 {
-    font-family: var(--font-main);
+  /* --- Cabeçalhos --- */
+  h1 { font-family: var(--font-main); color: var(--heading-color); font-size: 1.4em; margin-top: 1.25em; margin-bottom: 0.75em; font-weight: bold;}
+  h2 { font-family: var(--font-main); color: var(--heading-color); font-size: 1.1em; margin-top: 1.25em; margin-bottom: 0.6em; font-weight: bold;}
+  h3 { font-family: var(--font-main); color: var(--heading-color); font-size: 1.21em; margin-top: 1.25em; margin-bottom: 0.5em; font-weight: bold;}
+  h4, h5, h6 { font-family: var(--font-main); color: var(--heading-color); margin-top: 1em; margin-bottom: 0.5em; font-weight: bold;}
+
+  /* --- Links --- */
+  a { color: var(--link-color); cursor: pointer; text-decoration: none; }
+  a:hover { text-decoration: underline; opacity: 1; }
+  nav a { margin-right: 10px; text-decoration: underline; vertical-align: middle; }
+
+  /* Sublinhado para acessibilidade */
+  main p a,
+  main li a:not(ul li a),
+  footer a {
+    text-decoration: underline;
+  }
+
+  /* --- Texto e Elementos Inline --- */
+  p { color: var(--text-color); font-size: 1em; margin-top: 0; margin-bottom: 1em; line-height: inherit; }
+  strong, b { color: var(--heading-color); font-weight: bold; }
+  button { margin: 0; cursor: pointer; background: none; border: none; padding: 0; }
+  time { font-family: var(--font-secondary); font-style: normal; font-size: 0.9em; }
+
+  /* --- Layout e Blocos --- */
+  main { line-height: 1.6; }
+  main > *:first-child { margin-top: 0; }
+  table { width: 100%; border-collapse: collapse; margin: 1em 0; }
+  th, td { border: 1px solid var(--text-color); padding: 0.5em; text-align: left;}
+  hr { border: 0; border-top: 1px dashed var(--text-color); opacity: 1; margin: 2em 0; }
+  img { max-width: 100%; height: auto; display: block; }
+
+  code { font-family: monospace; padding: 2px 4px; background-color: var(--code-background-color); color: var(--code-color); border-radius: 3px; font-size: 0.9em; }
+  blockquote { border-left: 3px solid var(--link-color); color: var(--blockquote-color); padding-left: 1em; margin: 1em 0; font-style: italic; opacity: 1;} /* <<-- CORREÇÃO AQUI (removido ; extra) */
+  footer { padding: 25px 0; text-align: center; font-size: 0.9em; opacity: 1; }
+
+  /* --- Estilos para o Cabeçalho Principal --- */ /* <<-- CORREÇÃO AQUI (Simplificado comentário) */
+  header {
+    /* Sem display: flex aqui por padrão */
+    margin-bottom: 2em; /* Espaço abaixo do header */
+  }
+
+  header a.title { /* Link do título do site */
     color: var(--heading-color);
-    font-size: 1.3em;
-    margin-top: 1.5em;
-    margin-bottom: 0.75em;
-  }
-
-  h2 {
-    font-family: var(--font-main);
-    color: var(--heading-color);
-    font-size: 1em;
-    margin-top: 1.25em;
-    margin-bottom: 0.6em;
-  }
-
-  h3 {
-    font-family: var(--font-main);
-    color: var(--heading-color);
-    font-size: 1.1em;
-    margin-top: 1.1em;
-    margin-bottom: 0.5em;
-  }
-
-  /* --- Estilos Comuns para Cabeçalhos H4, H5, H6 --- */
-  h4, h5, h6 {
-    font-family: var(--font-main);
-    color: var(--heading-color);
-    /* Adicione font-size e margin se necessário */
-  }
-
-
-  a { /* Estilo padrão para TODOS os links */
-    color: var(--link-color);
-    cursor: pointer;
     text-decoration: none;
-  }
-  
-   p {
-  color: var(--text-color);
-  font-size: 1em;
-  margin-top: 0;       /* Opcional: Zerar margem superior para consistência */
-  margin-bottom: 1.5em;  /* <<< Aumentado de 0.5em para 1em. Ajuste este valor (ex: 0.8em, 1.2em) */
-  line-height: inherit; /* Garante que herde a altura de linha do body */
-}
+    display: block;
+    margin-bottom: 0.5em; /* Espaço entre título e nav/botão ABAIXO dele */
   }
 
-  /* (Implicitamente, a:visited agora também usa var(--link-color) por causa da variável) */
-
-  a:hover {
-    text-decoration: underline;
-  }
-
-  nav a {
-    margin-right: 8px;
-    text-decoration: underline;
-  }
-  
-  /* Adiciona sublinhado a links dentro de parágrafos, listas e no rodapé para acessibilidade */
-main p a,
-main li a,
-footer a {
-  text-decoration: underline;
-}
-
-  strong, b {
-    color: var(--heading-color);
-  }
-
-  button {
+  header p.site-title { /* Parágrafo com o título */
+    font-family: var(--font-main);
+    font-size: 1.5em; /* Ajuste como quiser */
+    font-weight: bold;
     margin: 0;
+    line-height: 2em;
+    display: inline-block;
+  }
+
+  header a.title:hover { color: var(--heading-color); text-decoration: none; }
+
+  /* --- Estilos para a Navegação e Botão de Tema --- */ /* <<-- CORREÇÃO AQUI (Simplificado comentário) */
+  header nav { /* Container da navegação (Home, Blog, Botão) */
+      display: flex;                 /* <<-- MUDANÇA AQUI (Flexbox adicionado) */
+      align-items: center;           /* <<-- MUDANÇA AQUI (Centraliza verticalmente) */
+  }
+
+  #theme-toggle {
+    background: none;
+    border: none;
+    padding: 0;
     cursor: pointer;
+    /* margin-left: 8px; */ /* <<-- CORREÇÃO AQUI (Removido, flexbox cuida disso) */
+    vertical-align: middle; /* Ajuda, mas align-items em nav é principal */
+    line-height: 1;         /* Importante para consistência do ícone */
+    font-size: 0.8em;       /* Ou o tamanho que você definiu */
+    color: var(--link-color);
+    position: relative;     /* Mantém para o ajuste 'top' */
+    top: 3px;               /* Ou o ajuste vertical que você definiu */
+    /* right: 6px */       /* <<-- CORREÇÃO AQUI (Removido, flexbox cuida disso) */
   }
+  #theme-toggle:hover { opacity: 1; } /* Você mudou para 1, mantive */
 
-time {
-  font-family: var(--font-secondary); /* <<< CORRIGIDO para usar a variável correta */
-  font-style: normal;
-  font-size: 15px; /* Você pode ajustar este tamanho se quiser */
+  html.dark #theme-toggle { color: var(--link-color); }
+  html.leaf #theme-toggle { color: var(--link-color); } /* <<-- ADICIONADO (Define cor para o tema leaf) */
+                                                      /* Ajuste a cor se quiser diferente para leaf */
+
+  /* --- Controle de visibilidade dos Ícones de Tema (4 Temas) --- */
+
+/* --- Controle de visibilidade dos Ícones de Tema (4 Temas) --- */
+
+/* Esconde TODOS os ícones por padrão */
+#theme-toggle .icon-light,
+#theme-toggle .icon-dark,
+#theme-toggle .icon-leaf,
+#theme-toggle .icon-cake { /* <-- Inclui .icon-cake */
+  display: none;
 }
 
-  main {
-    line-height: 1.5;
-  }
-  
-  /* Remove a margem superior do primeiro elemento dentro de main */
-main > *:first-child {
-  margin-top: 0;
+/* Mostra APENAS o ícone correto baseado na classe ATIVA do HTML */
+html.light #theme-toggle .icon-light { display: inline; }
+html.dark #theme-toggle .icon-dark { display: inline; }
+html.leaf #theme-toggle .icon-leaf { display: inline; }
+html.cake #theme-toggle .icon-cake { display: inline; } /* <-- Regra para cake */
+
+/* Regra de fallback */
+html:not(.dark):not(.leaf):not(.cake) #theme-toggle .icon-light { /* <-- Inclui :not(.cake) */
+   display: inline;
 }
+/* (Regras de cor para #theme-toggle em cada tema, se necessário) */
+/* Se quiser que a cor do ícone mude com o tema, adicione/ajuste aqui */
+html.dark #theme-toggle { color: var(--link-color); } /* Exemplo: Usa a cor do link do tema dark */
+html.leaf #theme-toggle { color: var(--link-color); } /* Exemplo: Usa a cor do link do tema leaf */
+html.cake #theme-toggle { color: var(--link-color); } /* Exemplo: Usa a cor do link do tema cake */
+/* A cor para o tema light já está definida na regra principal #theme-toggle */
 
-  table {
-    width: 100%;
-  }
+  /* --- Fim dos Estilos do Cabeçalho --- */
 
-  hr {
-    border: 0;
-    border-top: 1px dashed;
-  }
 
-  img {
-    max-width: 100%;
-  }
+  /* --- Demais Estilos (.inline, .highlight, etc) --- */
+  .inline { width: auto !important; }
 
-  code { /* Código inline */
-    font-family: monospace;
-    padding: 2px;
+  .highlight, pre.code { /* Blocos de código */
+    padding: 1em;
     background-color: var(--code-background-color);
     color: var(--code-color);
     border-radius: 3px;
-  }
-
-  blockquote {
-  border-left: 3px solid var(--link-color); /* Exemplo: Borda um pouco mais grossa e azul */
-  color: var(--blockquote-color);
-  padding-left: 1em;   /* << REDUZIDO: Espaço entre a borda e o texto (Ajuste 1em, 1.5em, 15px...) */
-  margin-left: 0;      /* << ADICIONADO: Remove a indentação externa padrão */
-  margin-right: 0;     /* Opcional: Remove margem direita padrão */
-  margin-top: 1em;     /* Opcional: Espaço vertical acima */
-  margin-bottom: 1em;  /* Opcional: Espaço vertical abaixo */
-  font-style: italic;    /* Mantido */
-}
-
-  footer {
-    padding: 25px 0;
-    text-align: center;
-    font-size: 0.8em;
-  }
-
-/* --- Estilos para o Cabeçalho Principal --- */
-
-header {
-  margin-bottom: 2.5em; /* Espaço abaixo do header (Sua regra existente) */
-}
-
-/* Estilos para o PARÁGRAFO (<p>) que envolve o título do site */
-header p.site-title { /* Seletor focado no <p> com a classe */
-  font-family: var(--font-main);
-  font-size: 1.5em;        /* Tamanho que você ajustou */
-  font-weight: bold;       /* Negrito */
-  margin: 0;               /* Sem margens extras no parágrafo */
-  line-height: 1.2;
-  display: inline-block; /* Ajuda a alinhar caso o 'a' cause problemas */
-}
-
-/* Estilo para o LINK (<a> com classe "title") do título do site */
-header a.title {
-  color: var(--heading-color); /* Define a cor correta (branco/off-white) */
-  text-decoration: none;       /* Sem sublinhado */
-  display: block;              /* Necessário para margin-bottom funcionar bem */
-  margin-bottom: 1em;        /* Cria espaço abaixo. Ajuste 0.5em como quiser (ex: 1em, 10px) */
-}
-
-/* Estilo para o LINK do título do site QUANDO HOVER */
-header a.title:hover {     /* <<< SELETOR CORRIGIDO para o hover */
-  color: var(--heading-color); /* Mantém a cor */
-  text-decoration: none;       /* Sem sublinhado */
-}
-
-/* --- Fim dos Estilos do Cabeçalho --- */
-
-/* IMPORTANTE: Se você ainda tiver as regras INCORRETAS abaixo em algum lugar, APAGUE-AS: */
-/* header .site-title a { ... } */
-/* header .site-title a:hover { ... } */
-
-  .title:hover {
-    text-decoration: none;
-  }
-
-  .title h1 {
-    font-size: 1.5em;
-  }
-
-  .inline {
-    width: auto !important;
-  }
-
-  .highlight, .code { /* Blocos de código */
-    padding: 1px 15px;
-    background-color: var(--code-background-color);
-    color: var(--code-color);
-    border-radius: 3px;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
+    margin: 1em 0;
     overflow-x: auto;
+    font-size: 0.9em;
+    line-height: 1.4;
   }
+  .highlight code, pre.code code { padding: 0; background-color: transparent; border-radius: 0; font-size: inherit; }
 
-  /* --- Estilos para Lista de Posts --- */
-  main ul {
-    list-style-type: none; /* Remove os pontinhos */
-    padding-left: 0;       /* Remove o recuo da esquerda */
+
+  /* --- Estilos para Lista de Posts Principal --- */
+  main ul { list-style-type: none; padding-left: 0; }
+  main ul li { margin-bottom: 1em; }
+
+  /* Estilo BASE para os links de título na lista */
+  main ul li a {
+      color: var(--heading-color);
+      font-size: 1.1em;
+      text-decoration: none;
+      font-weight: bold;
+      max-width: 80% /* Você adicionou isso */
   }
+  main ul li a:hover { text-decoration: none; opacity: 1; } /* Você mudou para 1 */
 
-  main ul li {
-    margin-bottom: 1.5em;   /* <<< AUMENTADO para mais espaço. Ajuste (ex: 0.8em, 1.2em) como preferir. */
-    /* Adicione display:flex; justify... etc se o layout quebrar */
-    /* display: flex; */
-    /* justify-content: space-between; */
-}
-
-/* Estilo BASE para os links de título na lista */
-main ul li a {
-    color: var(--heading-color); /* Define a cor padrão (light mode) como a cor do cabeçalho (off-black) */
-    /* Se quiser um tamanho de fonte específico para esses links, adicione aqui: */
-    /* font-size: 1.1em; */
-}
-
-  main ul li span { /* Span da Data */
-    flex: 0 0 100px;   /* Reserva um espaço fixo de 100px para a data. */
-    text-align: right;
+  main ul li span { /* Span da Data na lista */
     margin-left: 1em;
-    font-size: 0.8em;  /* Ajustado para o tamanho menor */
-  } /*
+    font-size: 0.8em; /* Você mudou */
+    opacity: 1;       /* Você mudou */
+    display: block;
+    margin-top: 0.2em;
+    /* Removi flex e text-align right pois não funcionam bem sem flex no li */
+  }
+
 
   /* --- Media Query para Telas Pequenas (Celulares) --- */
-@media (max-width: 767px) {
+  @media (max-width: 767px) {
+    main ul li a { max-width: 65%; display: block; font-size: 1em; }
+    main ul li span { display: block; text-align: left; margin-left: 0; margin-top: 0.3em; }
+    main article h1 { max-width: 80%; font-size: 1.2em; } /* Você mudou */
+    body { padding: 15px; }
+    header p.site-title { font-size: 1.5em; } /* Você mudou */
+    header a.title { margin-bottom: 0.25em;} /* Você mudou */
+    #theme-toggle { font-size: 0.9em; } /* Você mudou */
+     /* Poderia ajustar o 'top' aqui se precisar para telas pequenas também: */
+     /* #theme-toggle { font-size: 1em; top: 2px; } */
+  } /* --- Fim da Media Query --- */
 
-  /* Regra existente para links da lista */
-  main ul li a {
-    max-width: 60%;
-  }
 
-  /* Regra NOVA para o H1 do post */
-  main article h1 {
-    max-width: 80%; /* Limita H1 a 80% da largura do container. Ajuste se necessário. */
-  }
-
-  /* Opcional: Reduzir espaço da data em telas pequenas */
-  /* main ul li span { flex-basis: 80px; } */
-
-} /* --- Fim da Media Query --- */
-
-figure {
-  margin: 1.5em 0; /* Espaçamento vertical padrão para figuras */
-  padding: 0;
-}
-
-figure img,
-figure picture { /* Aplica a imagens dentro de figure e ao picture */
-  max-width: 100%; /* Garante que não ultrapasse o container */
-  height: auto;    /* Mantém a proporção ao redimensionar a largura */
-  display: block;  /* Evita espaço extra abaixo da imagem */
-  margin-left: auto; /* Centraliza se a figura for mais larga */
-  margin-right: auto;
-}
-
-figure figcaption {
-  text-align: center;
-  font-size: 0.9em;
-  color: var(--text-color);
-  margin-top: 0.5em;
-}
+  /* --- Estilos para Figure/Figcaption (Otimização de Imagem) --- */
+  figure { margin: 1.5em 0; padding: 0; }
+  figure img, figure picture { max-width: 100%; height: auto; display: block; margin: 0 auto; border-radius: 3px; }
+  figure figcaption { text-align: center; font-size: 0.9em; color: var(--text-color); margin-top: 0.5em; opacity: 1;} /* Você mudou */
 
 </style>
