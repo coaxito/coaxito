@@ -1,12 +1,34 @@
-<!-- Primary Meta Tags -->
-<meta name="title" content="{{ with .Title }}{{ . }}{{ else }}{{ .Site.Title }}{{ end }}" />
-<meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}" />
+{{- /* layouts/partials/seo_tags.html */ -}}
 
-<!-- Open Graph / Facebook -->
+{{- /* Determina o título e a descrição a serem usados nas meta tags */ -}}
+{{- $title := .Title | default .Site.Title -}}
+{{- $desc := .Description | default (.Summary | default .Site.Params.description) -}}
+
+<meta name="title" content="{{ $title }}" />
+{{- with $desc }}
+<meta name="description" content="{{ . }}" />
+{{- end }}
+
+{{/* --- Open Graph / Facebook --- */}}
+{{/* Usa o template interno do Hugo que cobre muitas tags OG importantes. */}}
 {{ template "_internal/opengraph.html" . }}
 
-<!-- Twitter -->
+{{/* Adiciona manualmente og:image:alt, pois não está incluído no template interno. */}}
+{{/* PERSONALIZE o 'content' abaixo para descrever sua imagem padrão de compartilhamento. */}}
+<meta property="og:image:alt" content="Desenho estilizado em linha (preto e branco) do rosto de Breno Santana, autor do Breno's Blog, com óculos redondos e barba." /> {{/* <== PERSONALIZE ESTE TEXTO */}}
+
+
+{{/* --- Twitter --- */}}
+{{/* Usa o template interno do Hugo que cobre muitas tags do Twitter Card. */}}
 {{ template "_internal/twitter_cards.html" . }}
 
-<!-- Microdata -->
+{{/* Adiciona manualmente twitter:image:alt, pois não está incluído no template interno. */}}
+{{/* PERSONALIZE o 'content' abaixo para descrever sua imagem padrão de compartilhamento. */}}
+<meta name="twitter:image:alt" content="Desenho estilizado em linha (preto e branco) do rosto de Breno Santana, autor do Breno's Blog, com óculos redondos e barba." /> {{/* <== PERSONALIZE ESTE TEXTO */}}
+
+
+{{/* --- Schema.org Microdata --- */}}
+{{/* Usa o template interno do Hugo para dados estruturados Schema.org. */}}
 {{ template "_internal/schema.html" . }}
+
+{{- /* Fim layouts/partials/seo_tags.html */ -}}
