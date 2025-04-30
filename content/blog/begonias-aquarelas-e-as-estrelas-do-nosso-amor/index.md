@@ -5,8 +5,9 @@ lastmod = "2025-04-29"
 tags = ["poesia"]
 url = "/begonias-aquarelas-e-as-estrelas-do-nosso-amor/"
 description = "Um texto sobre amor, saudade e transformações. Reflexões sobre o brilho das estrelas, a suavidade das aquarelas e a doçura de um encontro que mudou tudo."
-images = ["paisagem_pastel.jpg"]
+images = ["/thumbnails/paisagem_pastel.jpg"]
 author = "Breno Santana"
+sharing_image_alt = "Montanhas escuras ao fundo com um lago calmo em primeiro plano. Céu com tons pastéis rosa e azul, criando um ambiente tranquilo e sereno."
 +++
 
 ## Um abrigo quentinho para meu coração

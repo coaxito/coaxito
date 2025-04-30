@@ -5,8 +5,9 @@ lastmod = "2025-04-29"
 tags = ["musica"]
 url = "/bacon-ovos-e-marmeladas-psicodelicas-do-pink-floyd/"
 description = "Alan's Psychedelic Breakfast é a despedida perfeita de Atom Heart Mother. Entre ovos fritos, bacon, cereais, marmelada e diálogos descontraídos, o Pink Floyd transforma paisagens sonoras de cafés da manhã em Los Angeles em uma experiência musical hipnotizante."
-images = ["encarte_do_atom_heart_mother.jpg"]
+images = ["/thumbnails/encarte_do_atom_heart_mother.jpg"]
 author = "Breno Santana"
+sharing_image_alt = "Encarte do Atom Heart Mother do Pink Floyd, com vacas pastando em um campo gramado rodeado por árvores. O céu está nublado, criando uma atmosfera calma e serena. Imagem em preto e branco."
 +++
 
 ## Talheres à mesa, é hora de tomar café

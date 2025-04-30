@@ -13,18 +13,33 @@
 {{/* Usa o template interno do Hugo que cobre muitas tags OG importantes. */}}
 {{ template "_internal/opengraph.html" . }}
 
-{{/* Adiciona manualmente og:image:alt, pois não está incluído no template interno. */}}
-{{/* PERSONALIZE o 'content' abaixo para descrever sua imagem padrão de compartilhamento. */}}
-<meta property="og:image:alt" content="Desenho estilizado em linha (preto e branco) do rosto de Breno Santana, autor do Breno's Blog, com óculos redondos e barba." /> {{/* <== PERSONALIZE ESTE TEXTO */}}
+{{/* --- Alt Text para Imagem Open Graph (OG) --- */}}
+{{- /* Primeiro, tenta pegar o alt text específico do front matter da página */ -}}
+{{- $ogAlt := .Params.sharing_image_alt -}}
+{{- /* Se não encontrou no front matter, usa o texto padrão (seu avatar) */ -}}
+{{- if not $ogAlt -}}
+    {{- $ogAlt = "Desenho estilizado em linha (preto e branco) do rosto de Breno Santana, autor do Breno's Blog, com óculos redondos e barba." -}} {{/* <== SEU TEXTO PADRÃO */}}
+{{- end -}}
+{{- /* Adiciona a tag meta somente se $ogAlt tiver algum valor */ -}}
+{{- with $ogAlt }}
+<meta property="og:image:alt" content="{{ . }}" />
+{{- end }}
 
 
 {{/* --- Twitter --- */}}
 {{/* Usa o template interno do Hugo que cobre muitas tags do Twitter Card. */}}
 {{ template "_internal/twitter_cards.html" . }}
 
-{{/* Adiciona manualmente twitter:image:alt, pois não está incluído no template interno. */}}
-{{/* PERSONALIZE o 'content' abaixo para descrever sua imagem padrão de compartilhamento. */}}
-<meta name="twitter:image:alt" content="Desenho estilizado em linha (preto e branco) do rosto de Breno Santana, autor do Breno's Blog, com óculos redondos e barba." /> {{/* <== PERSONALIZE ESTE TEXTO */}}
+{{/* --- Alt Text para Imagem Twitter --- */}}
+{{- /* Usa a mesma lógica do Open Graph para consistência */ -}}
+{{- $twAlt := .Params.sharing_image_alt -}}
+{{- if not $twAlt -}}
+    {{- $twAlt = "Desenho estilizado em linha (preto e branco) do rosto de Breno Santana, autor do Breno's Blog, com óculos redondos e barba." -}} {{/* <== SEU TEXTO PADRÃO */}}
+{{- end -}}
+{{- /* Adiciona a tag meta somente se $twAlt tiver algum valor */ -}}
+{{- with $twAlt }}
+<meta name="twitter:image:alt" content="{{ . }}" />
+{{- end }}
 
 
 {{/* --- Schema.org Microdata --- */}}

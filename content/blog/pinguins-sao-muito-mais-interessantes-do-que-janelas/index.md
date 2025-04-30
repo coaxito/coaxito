@@ -5,8 +5,9 @@ lastmod = "2025-04-29"
 tags = ["tecnologia"]
 url = "/pinguins-sao-muito-mais-interessantes-do-que-janelas/"
 description = "Pinguins são criaturinhas fascinantes — e, no mundo da tecnologia, eles deslizam para muito além do gelo. Do seu computador ao planeta Marte, o Linux está em todos os lugares, enquanto as janelas… bem, nem sempre são a melhor opção."
-images = ["pinguim_banhando_na_antartica.jpg"]
+images = ["/thumbnails/pinguim_banhando_na_antartica.jpg"]
 author = "Breno Santana"
+sharing_image_alt = "Pinguim mergulha na água entre icebergs brancos com detalhes azuis. A cena transmite ação e frio no ambiente antártico."
 +++
 
 ## Era uma vez um pinguim carismático...

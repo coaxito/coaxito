@@ -5,8 +5,9 @@ lastmod = "2025-04-29"
 tags = ["musica"]
 url = "/plantasia-encanta-com-seu-conceito-e-misticismo/"
 description = "Plantasia é um disco de 1976 criado para plantas e aqueles que às amam, misturando sintetizadores, misticismo e uma conexão única e aconchegante com a natureza."
-images = ["arte_do_plantasia.jpg"]
+images = ["/thumbnails/arte_do_plantasia.jpg"]
 author = "Breno Santana"
+sharing_image_alt = "Ilustração do álbum Plantasia do Mort Garson: desenho de uma planta grande com folhas verdes e uma figura sorridente sentada no vaso. Fundo branco, transmitindo tranquilidade."
 +++
 
 ## O presente perfeito para as suas plantas
