@@ -4,60 +4,34 @@
 
 {{/* Link para Auto-Descoberta do Feed RSS (Adicionado Aqui) */}}
 {{ range .AlternativeOutputFormats -}}
-  {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+  {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
 {{ end -}}
 {{ with .OutputFormats.Get "RSS" -}}
-  {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+  {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
 {{ end -}}
 
+{{/* Bloco de Favicons (Mantido como estava) */}}
 <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <link rel="shortcut icon" href="/favicon.ico" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-<meta name="apple-mobile-web-coaxito" content="Coaxito" />
+<meta name="apple-mobile-web-app-title" content="Coaxito" /> {{/* Corrigi o nome do atributo aqui, era apple-mobile-web-coaxito */}}
 <link rel="manifest" href="/site.webmanifest" />
 
-{{/* Link para Flaticon Uicons - TODOS os estilos */}}
+
+{{/* Verificação de Domínio do Pinterest (Se você adicionou aqui, mantenha) */}}
+{{/* <meta name="p:domain_verify" content="SEU_CODIGO_DE_VERIFICACAO_AQUI"/> */}}
+
+
+{{/* Link para Flaticon Uicons - TODOS os estilos (Mantido) */}}
 <link href='https://cdn.jsdelivr.net/npm/@flaticon/flaticon-uicons@3.3.1/css/all/all.min.css' rel='stylesheet'>
 
-{{/* ===== Open Graph Image para a Homepage ===== */}}
-{{ if .IsHome }}
-  {{ $imagePath := "images/og-imagem-home.jpg" }} {{/* <== CONFIRME O CAMINHO E NOME DA SUA IMAGEM DENTRO DE 'static' */}}
-  {{ $imageURL := absURL $imagePath }} {{/* Gera a URL absoluta assumindo que a imagem está em /static */}}
 
-  {{/* Verifica se a URL foi gerada corretamente (não está vazia ou só "/") */}}
-  {{ if and $imageURL (ne $imageURL "/") }}
-    <meta property="og:image" content="{{ $imageURL }}" />
-    <meta property="og:image:secure_url" content="{{ $imageURL }}" />
+{{/* O BLOCO INTEIRO "{{ if .IsHome }} ... {{ end }}" 
+    QUE ADICIONAVA AS TAGS OG:IMAGE E TWITTER:IMAGE 
+    ESPECÍFICAS DA HOMEPAGE FOI REMOVIDO DAQUI.
+    ESSAS TAGS SERÃO AGORA GERADAS SOMENTE PELO seo_tags.html
+*/}}
 
-    {{/* Tenta obter dados da imagem (tipo, dimensões) APENAS se ela for um Recurso E estivermos em modo Produção */}}
-    {{ if hugo.IsProduction }}
-      {{ with resources.Get $imagePath }} {{/* Tenta pegar a imagem como Recurso */}}
-        <meta property="og:image:type" content="{{ .MediaType.Type }}" />
-        <meta property="og:image:width" content="{{ .Width }}" />
-        <meta property="og:image:height" content="{{ .Height }}" />
-      {{ else }}
-         {{/* Fallback Opcional: Se não for Recurso, pode adicionar dimensões fixas se souber */}}
-         {{/* <meta property="og:image:type" content="image/jpeg" /> */}}
-         <meta property="og:image:width" content="1200" />
-         <meta property="og:image:height" content="630" />
-      {{ end }}
-    {{ else }}
-       {{/* Fallback Opcional fora de produção: Adicionar dimensões fixas se souber */}}
-       <meta property="og:image:width" content="1200" />
-       <meta property="og:image:height" content="630" />
-    {{ end }}
-
-    <meta property="og:image:alt" content="Imagem de pré-visualização do Breno's Blog" /> {{/* <== MUDE A DESCRIÇÃO */}}
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:image" content="{{ $imageURL }}" />
-    <meta name="twitter:image:alt" content="Imagem de pré-visualização do Breno's Blog" /> {{/* <== MUDE A DESCRIÇÃO */}}
-  {{ end }}
-{{ end }}
-{{/* ===== Fim Open Graph Image Homepage ===== */}}
-
-
-{{/* Link para Flaticon Uicons - TODOS os estilos */}}
-<link href='https://cdn.jsdelivr.net/npm/@flaticon/flaticon-uicons@3.3.1/css/all/all.min.css' rel='stylesheet'>
 
 {{/* Este arquivo pode ser usado no futuro para adicionar outras meta tags, links ou scripts na head */}}
