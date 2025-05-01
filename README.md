@@ -1,6 +1,6 @@
 # Breno's Blog
 
-Este é o repositório do meu blog pessoal, construído com o gerador de sites estáticos [Hugo](https://gohugo.io/).
+Este é o [repositório do meu blog pessoal]([https://gohugo.io/](https://github.com/coaxito/coaxito)), construído com o gerador de sites estáticos [Hugo](https://gohugo.io/).
 
 ## Base do tema e modificações
 
