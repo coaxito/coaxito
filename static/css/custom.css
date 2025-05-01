@@ -1,4 +1,6 @@
-/* static/css/custom.css */
 h1 {
     font-size: 1.1rem !important;
 }
+
+body.kind-page header {
+    margin-top: 1.5em; !important;

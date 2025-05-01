@@ -56,6 +56,8 @@ html.cake {
 
   /* Aplica cores escuras baseado na preferência do Sistema (como padrão inicial) */
   /* Evita aplicar se o usuário escolheu light manualmente (classe .light ou .leaf) */
+  
+  
  @media (prefers-color-scheme: dark) {
   html:not(.light):not(.leaf):not(.cake) { /* <<-- ADICIONADO :not(.cake) */
     /* ... variáveis de cor do tema dark aqui ... */
@@ -97,23 +99,22 @@ html.cake {
     background-color: var(--background-color);
     word-wrap: break-word;
     overflow-wrap: break-word;
-    line-height: 1.6;
+    line-height: 1.5;
     color: var(--text-color);
-    transition: background-color 0.2s ease, color 0.2s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
 
   /* --- Cabeçalhos --- */
-  h1 { font-family: var(--font-main); color: var(--heading-color); font-size: 1.4em; margin-top: 1.25em; margin-bottom: 0.75em; font-weight: bold;}
-  h2 { font-family: var(--font-main); color: var(--heading-color); font-size: 1em; margin-top: 1.25em; margin-bottom: 0.6em; font-weight: bold;}
-  h3 { font-family: var(--font-main); color: var(--heading-color); font-size: 1.21em; margin-top: 1.25em; margin-bottom: 0.5em; font-weight: bold;}
-  h4, h5, h6 { font-family: var(--font-main); color: var(--heading-color); margin-top: 1em; margin-bottom: 0.5em; font-weight: bold;}
+  h1 { font-family: var(--font-main); color: var(--heading-color); font-weight: bold;}
+  h2 { font-family: var(--font-main); color: var(--heading-color); font-size: 1em; font-weight: bold;}
+  h3, h4, h5, h6 { font-family: var(--font-main); color: var(--heading-color); font-weight: bold;}
 
   /* --- Links --- */
   a { color: var(--link-color); cursor: pointer; text-decoration: none; }
   a:hover { text-decoration: underline; opacity: 1; }
-  nav a { margin-right: 10px; text-decoration: underline; vertical-align: middle; }
+  nav a { margin-right: 12.5px; text-decoration: underline; vertical-align: middle; margin-bottom: 1em; }
 
-  /* Sublinhado para acessibilidade */
+  /* Sublinhado nos links para acessibilidade */
   main p a,
   main li a:not(ul li a),
   footer a {
@@ -121,13 +122,13 @@ html.cake {
   }
 
   /* --- Texto e Elementos Inline --- */
-  p { color: var(--text-color); font-size: 1em; margin-top: 0; margin-bottom: 1em; line-height: inherit; }
+  p { color: var(--text-color); font-size: 1em; margin-top: 1em\; margin-bottom: 1em; line-height: inherit; }
   strong, b { color: var(--heading-color); font-weight: bold; }
   button { margin: 0; cursor: pointer; background: none; border: none; padding: 0; }
   time { font-family: var(--font-secondary); font-style: normal; font-size: 0.9em; }
 
   /* --- Layout e Blocos --- */
-  main { line-height: 1.6; }
+  main { line-height: 1.5; }
   main > *:first-child { margin-top: 0; }
   table { width: 100%; border-collapse: collapse; margin: 1em 0; }
   th, td { border: 1px solid var(--text-color); padding: 0.5em; text-align: left;}
@@ -135,13 +136,14 @@ html.cake {
   img { max-width: 100%; height: auto; display: block; }
 
   code { font-family: monospace; padding: 2px 4px; background-color: var(--code-background-color); color: var(--code-color); border-radius: 3px; font-size: 0.9em; }
-  blockquote { border-left: 3px solid var(--link-color); color: var(--blockquote-color); padding-left: 1em; margin: 1em 0; font-style: italic; opacity: 1;} /* <<-- CORREÇÃO AQUI (removido ; extra) */
+  blockquote { border-left: 2px solid var(--link-color); color: var(--blockquote-color); padding-left: 1em; margin: 1em 0; font-style: italic; opacity: 1;}
   footer { padding: 25px 0; text-align: center; font-size: 0.9em; opacity: 1; }
 
-  /* --- Estilos para o Cabeçalho Principal --- */ /* <<-- CORREÇÃO AQUI (Simplificado comentário) */
+  /* --- Estilos para o Cabeçalho Principal --- */
   header {
     /* Sem display: flex aqui por padrão */
-    margin-bottom: 2em; /* Espaço abaixo do header */
+    margin-bottom: 2.5em; /* Espaço abaixo do header */
+    margin-bottom: 1.5em; /* Espaço abaixo do header */
   }
 
   header a.title { /* Link do título do site */
@@ -179,8 +181,7 @@ html.cake {
     font-size: 0.8em;       /* Ou o tamanho que você definiu */
     color: var(--link-color);
     position: relative;     /* Mantém para o ajuste 'top' */
-    top: 3px;               /* Ou o ajuste vertical que você definiu */
-    /* right: 6px */       /* <<-- CORREÇÃO AQUI (Removido, flexbox cuida disso) */
+    top: -5px;               /* Ou o ajuste vertical que você definiu */
   }
   #theme-toggle:hover { opacity: 1; } /* Você mudou para 1, mantive */
 
@@ -238,25 +239,23 @@ html.cake #theme-toggle { color: var(--link-color); } /* Exemplo: Usa a cor do l
 
   /* --- Estilos para Lista de Posts Principal --- */
   main ul { list-style-type: none; padding-left: 0; }
-  main ul li { margin-bottom: 1em; }
+  main ul li { margin-bottom: 1.25em; }
 
   /* Estilo BASE para os links de título na lista */
   main ul li a {
       color: var(--heading-color);
       font-size: 1.1em;
       text-decoration: none;
-      font-weight: bold;
+      font-weight: none;
       max-width: 80% /* Você adicionou isso */
   }
   main ul li a:hover { text-decoration: none; opacity: 1; } /* Você mudou para 1 */
 
   main ul li span { /* Span da Data na lista */
     margin-left: 1em;
-    font-size: 0.8em; /* Você mudou */
+    font-size: 0.9em; /* Você mudou */
     opacity: 1;       /* Você mudou */
     display: block;
-    margin-top: 0.2em;
-    /* Removi flex e text-align right pois não funcionam bem sem flex no li */
   }
 
 
@@ -264,8 +263,8 @@ html.cake #theme-toggle { color: var(--link-color); } /* Exemplo: Usa a cor do l
   @media (max-width: 767px) {
     main ul li a { max-width: 65%; display: block; font-size: 1em; }
     main ul li span { display: block; text-align: left; margin-left: 0; margin-top: 0.3em; }
-    main article h1 { max-width: 80%; font-size: 1.2em; } /* Você mudou */
-    body { padding: 15px; }
+    main article h1 { max-width: 80%; font-size: 1.1em; } /* Você mudou */
+    body { padding: 20px; }
     header p.site-title { font-size: 1.5em; } /* Você mudou */
     header a.title { margin-bottom: 0.25em;} /* Você mudou */
     #theme-toggle { font-size: 0.9em; } /* Você mudou */
@@ -276,7 +275,7 @@ html.cake #theme-toggle { color: var(--link-color); } /* Exemplo: Usa a cor do l
 
   /* --- Estilos para Figure/Figcaption (Otimização de Imagem) --- */
   figure { margin: 1.5em 0; padding: 0; }
-  figure img, figure picture { max-width: 100%; height: auto; display: block; margin: 0 auto; border-radius: 3px; }
+  figure img, figure picture { max-width: 100%; height: auto; display: block; margin: 0 auto; border-radius: 5; }
   figure figcaption { text-align: center; font-size: 0.9em; color: var(--text-color); margin-top: 0.5em; opacity: 1;} /* Você mudou */
 
 </style>

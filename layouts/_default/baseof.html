@@ -32,18 +32,20 @@
       } catch (e) { /* Ignora erros de localStorage/matchMedia */ }
 
       // Aplica a classe no elemento raiz <html> // <<-- LÓGICA ATUALIZADA PARA 4 TEMAS
-      if (theme === THEME_DARK) {
+      // (O código JS que você já tem aqui aplica a classe de tema ao HTML, não ao BODY)
+      // ... (seu código JS continua aqui) ...
+       if (theme === THEME_DARK) {
         if (!document.documentElement.classList.contains(CLASS_DARK)) document.documentElement.classList.add(CLASS_DARK);
-        document.documentElement.classList.remove(CLASS_LIGHT, CLASS_LEAF, CLASS_CAKE); // <<-- Remove todas as outras
-      } else if (theme === THEME_LEAF) { // <<-- CORRIGIDO/PADRONIZADO
+        document.documentElement.classList.remove(CLASS_LIGHT, CLASS_LEAF, CLASS_CAKE);
+      } else if (theme === THEME_LEAF) {
         if (!document.documentElement.classList.contains(CLASS_LEAF)) document.documentElement.classList.add(CLASS_LEAF);
-        document.documentElement.classList.remove(CLASS_LIGHT, CLASS_DARK, CLASS_CAKE); // <<-- Remove todas as outras
-      } else if (theme === THEME_CAKE) { // <<-- BLOCO ADICIONADO
+        document.documentElement.classList.remove(CLASS_LIGHT, CLASS_DARK, CLASS_CAKE);
+      } else if (theme === THEME_CAKE) {
          if (!document.documentElement.classList.contains(CLASS_CAKE)) document.documentElement.classList.add(CLASS_CAKE);
-         document.documentElement.classList.remove(CLASS_LIGHT, CLASS_DARK, CLASS_LEAF); // <<-- Remove todas as outras
+         document.documentElement.classList.remove(CLASS_LIGHT, CLASS_DARK, CLASS_LEAF);
       } else { // Tema é Light
         if (!document.documentElement.classList.contains(CLASS_LIGHT)) document.documentElement.classList.add(CLASS_LIGHT);
-        document.documentElement.classList.remove(CLASS_DARK, CLASS_LEAF, CLASS_CAKE); // <<-- Remove todas as outras
+        document.documentElement.classList.remove(CLASS_DARK, CLASS_LEAF, CLASS_CAKE);
       }
     })();
   </script>
@@ -66,7 +68,8 @@
 
 </head>
 
-<body> {{/* Tag body normal */}}
+<body class="kind-{{ lower .Kind }}{{ with .Page.Params.bodyClass }} {{ . }}{{ end }}">
+
   <header>
     {{- partial "header.html" . -}}
   </header>
