@@ -5,7 +5,12 @@ body.kind-page h1 {
 
 body.kind-home h1{
     font-size: 1rem;
-    font-family: var(--font-main); color: var(--heading-color); font-weight: unset;
+    font-family: var(--font-main); color: var(--heading-color); font-weight: bold;
+}
+
+body.kind-section h1{
+    font-size: 1rem;
+    font-family: var(--font-main); color: var(--heading-color); font-weight: bold;
 }
 
 body.kind-page header {

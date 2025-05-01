@@ -1,21 +1,19 @@
 {{/* Arquivo: layouts/blog/list.html */}}
 {{ define "main" }}
 
-  {{/* Adiciona o título da seção (do _index.md, ex: "Artigos") como H1 */}}
-  <h1>{{ .Title }}</h1>
+  {{/* Adiciona o título da seção (do _index.md) como H1 */}}
+  {{/* Adicione a classe 'visually-hidden' se quiser escondê-lo visualmente */}}
+  <h1 {{ if site.Params.EsconderH1Blog }}class="visually-hidden"{{ end }}>{{ .Title }}</h1>
 
   {{/* Adiciona o conteúdo/texto introdutório do _index.md */}}
-  <div class="page-content-list"> {{/* Usamos uma div com classe para facilitar a estilização */}}
+  <div class="page-content-list">
     {{ .Content }}
   </div>
 
-  {{/* Seu código original que lista os posts */}}
+  {{/* Código original que lista os posts */}}
   <ul>
     {{ range .Pages }}
     <li>
-      {{/* Nota: Estilos inline como 'style="..."' funcionam, mas geralmente é melhor
-           colocar esses estilos em um arquivo CSS (como custom.css)
-           e usar classes no HTML. Ex: <div class="post-item">...</div> */}}
       <div style="display: flex; justify-content: space-between; align-items: baseline;">
         <a style="margin-right: 1em; text-decoration: none;" href="{{ .Permalink }}">{{ .Title }}</a>
         <span>{{ partial "format_date_pt.html" .Date }}</span> </div>
