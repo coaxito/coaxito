@@ -1,4 +1,4 @@
-# Breno's Blog (https:coaxito.com)
+# Breno's Blog
 
 Este é o repositório do meu blog pessoal, construído com o gerador de sites estáticos [Hugo](https://gohugo.io/).
 
