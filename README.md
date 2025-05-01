@@ -13,6 +13,10 @@ A partir dessa base, realizei modificações e adições significativas para ate
 
 ## Licenciamento
 
-O código original do tema Hugo Bear Blog (por Jan Raasch) é distribuído sob a **Licença MIT**. Uma cópia completa da licença original está incluída no arquivo `LICENSE` neste repositório.
+Este projeto utiliza código com diferentes licenças:
 
-As modificações e adições originais realizadas por Breno Santana de Souza (© 2025) neste projeto são também disponibilizadas sob os termos da **Licença MIT**, conforme detalhado no arquivo `LICENSE`.
+1.  **Código Base Original:** O código original do tema Hugo Bear Blog, criado por Jan Raasch, é licenciado sob os termos da **Licença MIT**. Os detalhes desta licença, aplicáveis ao código base original, podem ser encontrados no arquivo `LICENSE`. É necessário manter o aviso de copyright e permissão original ao usar ou distribuir o código base.
+
+2.  **Modificações e Adições:** Todas as modificações e adições feitas a partir dessa base por Breno Santana de Souza (© 2025) — incluindo a lógica do seletor de temas, personalizações de CSS/layout e outras adaptações neste repositório — são liberadas para o **Domínio Público** através da **The Unlicense**. O texto completo da The Unlicense, que se aplica a estas contribuições, também está incluído no arquivo `LICENSE`.
+
+Portanto, ao utilizar ou derivar deste projeto, por favor, esteja ciente de que as obrigações da Licença MIT se aplicam às partes do código originárias do Hugo Bear Blog, enquanto as modificações introduzidas por Breno Santana de Souza são livres de quaisquer restrições de direitos autorais sob The Unlicense.
