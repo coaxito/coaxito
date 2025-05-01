@@ -1,6 +1,6 @@
-# Breno's Blog (https:coaxito.com)
+# Breno's Blog
 
-Este é o repositório do meu blog pessoal, construído com o gerador de sites estáticos [Hugo](https://gohugo.io/).
+Este é o [repositório](https://github.com/coaxito/coaxito/) do meu blog pessoal, construído com o gerador de sites estáticos [Hugo](https://gohugo.io/).
 
 ## Base do tema e modificações
 
@@ -9,8 +9,7 @@ O projeto foi iniciado utilizando como base o tema [Hugo Bear Blog](https://gith
 A partir dessa base, realizei modificações e adições significativas para atender às minhas preferências e necessidades, incluindo:
 
 * Implementação de um seletor que permite alternar entre 4 temas visuais (Light, Dark, Ecologic, Cherry), utilizando JavaScript.
-* Personalização extensiva dos estilos via CSS customizado.
-* Adaptação da estrutura de layout e de componentes de interface (UI/UX).
+* Personalização dos estilos via CSS customizado.
 
 ## Licenciamento
 
