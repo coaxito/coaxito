@@ -2,7 +2,7 @@
 <link rel="preload" href="https://fonts.googleapis.com/css2?family=Literata:ital,wght@0,400;0,700;1,400&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Literata:ital,wght@0,400;0,700;1,400&display=swap"></noscript>
 
-{{/* Link para Auto-Descoberta do Feed RSS (Adicionado Aqui) */}}
+{{/* Link para Auto-Descoberta do Feed RSS */}}
 {{ range .AlternativeOutputFormats -}}
   {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
 {{ end -}}
@@ -16,11 +16,6 @@
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 <meta name="apple-mobile-web-app-title" content="Breno's Blog" />
 <link rel="manifest" href="/site.webmanifest" />
-
-
-{{/* Verificação de Domínio do Pinterest (Se você adicionou aqui, mantenha) */}}
-{{/* <meta name="p:domain_verify" content="SEU_CODIGO_DE_VERIFICACAO_AQUI"/> */}}
-
 
 {{/* Link para Flaticon Uicons - TODOS os estilos (Mantido) */}}
 <link href='https://cdn.jsdelivr.net/npm/@flaticon/flaticon-uicons@3.3.1/css/all/all.min.css' rel='stylesheet'>
