@@ -15,3 +15,15 @@ body.kind-section h1{
 
 body.kind-page header {
     margin-top: 1.5em; !important;
+    
+}
+    
+body.kind-404 h1 {
+    font-size: 1rem;
+    font-family: var(--font-main); color: var(--heading-color); font-weight: bold;
+}
+
+body.kind-404 h2 {
+    font-size: 1rem;
+    font-family: var(--font-main); color: var(--heading-color); font-weight: unset;
+}
