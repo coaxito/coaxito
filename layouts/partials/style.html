@@ -105,7 +105,7 @@ html.cake {
   }
 
   /* --- Cabeçalhos --- */
-  h1 { font-family: var(--font-main); color: var(--heading-color); font-weight: bold;}
+  h1 { font-family: var(--font-main); color: var(--heading-color); font-size: 1.2em; font-weight: bold;}
   h2 { font-family: var(--font-main); color: var(--heading-color); font-size: 1em; font-weight: bold;}
   h3, h4, h5, h6 { font-family: var(--font-main); color: var(--heading-color); font-weight: bold;}
 
@@ -155,7 +155,7 @@ html.cake {
 
   header p.site-title { /* Parágrafo com o título */
     font-family: var(--font-main);
-    font-size: 1.5em; /* Ajuste como quiser */
+    font-size: 1.4em; /* Ajuste como quiser */
     font-weight: bold;
     margin: 0;
     line-height: 2em;
@@ -244,9 +244,9 @@ html.cake #theme-toggle { color: var(--link-color); } /* Exemplo: Usa a cor do l
   /* Estilo BASE para os links de título na lista */
   main ul li a {
       color: var(--heading-color);
-      font-size: 1.1em;
+      font-size: 1em;
       text-decoration: none;
-      font-weight: none;
+      font-weight: unset;
       max-width: 80% /* Você adicionou isso */
   }
   main ul li a:hover { text-decoration: none; opacity: 1; } /* Você mudou para 1 */
@@ -261,11 +261,11 @@ html.cake #theme-toggle { color: var(--link-color); } /* Exemplo: Usa a cor do l
 
   /* --- Media Query para Telas Pequenas (Celulares) --- */
   @media (max-width: 767px) {
-    main ul li a { max-width: 65%; display: block; font-size: 1em; }
+    main ul li a { max-width: 60%; display: block; font-size: 1em; }
     main ul li span { display: block; text-align: left; margin-left: 0; margin-top: 0.3em; }
-    main article h1 { max-width: 80%; font-size: 1.1em; } /* Você mudou */
+    main article h1 { max-width: 80%;
     body { padding: 20px; }
-    header p.site-title { font-size: 1.5em; } /* Você mudou */
+    header p.site-title { font-size: 1.4em; } /* Você mudou */
     header a.title { margin-bottom: 0.25em;} /* Você mudou */
     #theme-toggle { font-size: 0.9em; } /* Você mudou */
      /* Poderia ajustar o 'top' aqui se precisar para telas pequenas também: */

@@ -10,12 +10,11 @@
   {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
 {{ end -}}
 
-{{/* Bloco de Favicons (Mantido como estava) */}}
 <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <link rel="shortcut icon" href="/favicon.ico" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-<meta name="apple-mobile-web-app-title" content="Coaxito" /> {{/* Corrigi o nome do atributo aqui, era apple-mobile-web-coaxito */}}
+<meta name="apple-mobile-web-app-title" content="Breno's Blog" />
 <link rel="manifest" href="/site.webmanifest" />
 
 
@@ -28,13 +27,3 @@
 
 {{/* Carrega o CSS Customizado (Adicionado Aqui) */}}
 <link rel="stylesheet" href="{{ "/css/custom.css" | relURL }}">
-
-
-{{/* O BLOCO INTEIRO "{{ if .IsHome }} ... {{ end }}" 
-    QUE ADICIONAVA AS TAGS OG:IMAGE E TWITTER:IMAGE 
-    ESPECÍFICAS DA HOMEPAGE FOI REMOVIDO DAQUI.
-    ESSAS TAGS SERÃO AGORA GERADAS SOMENTE PELO seo_tags.html
-*/}}
-
-
-{{/* Este arquivo pode ser usado no futuro para adicionar outras meta tags, links ou scripts na head */}}

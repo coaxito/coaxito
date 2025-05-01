@@ -2,8 +2,7 @@
 title: "Olá, mundo!"
 ---
 
-# Olá, mundo.
-Me chamo Breno Santana (21).
+# Meu nome é Breno Santana (21).
 
 Meu principal hobby é escrever sobre música, tecnologia, internet e outros tópicos pessoais.
 

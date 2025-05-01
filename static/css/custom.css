@@ -1,5 +1,11 @@
-h1 {
-    font-size: 1.1rem !important;
+body.kind-page h1 {
+    font-size: 1.2rem;
+    font-family: var(--font-main); color: var(--heading-color);
+}
+
+body.kind-home h1{
+    font-size: 1rem;
+    font-family: var(--font-main); color: var(--heading-color); font-weight: unset;
 }
 
 body.kind-page header {
