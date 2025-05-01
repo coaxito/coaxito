@@ -1,9 +1,4 @@
-# Base URL used when generating links to your pages
-# Set to the URL for your site
-baseURL = "https://coaxito.com" # << VERIFIQUE se este é o domínio final correto
-
-# The name of this wonderful theme ;-).
-theme = 'hugo-bearblog' # << Base theme, pode ser removido se você copiou todo o tema para /layouts e /static
+baseURL = "https://coaxito.com"
 
 # Basic metadata configuration for your blog.
 title = "Breno's Blog"
