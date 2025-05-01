@@ -1,39 +1,21 @@
 baseURL = "https://coaxito.com"
-
-# Basic metadata configuration for your blog.
 title = "Breno's Blog"
 author = "Breno Santana"
 copyright = "Copyright © Breno Santana de Souza"
 email = "breno@coaxito.com"
 languageCode = "pt-br"
 defaultContentLanguage = "pt-br"
-
-# Generate a nice robots.txt for SEO
 enableRobotsTXT = true
 
-# Generate "Bearblog"-like URLs !only!, see https://bearblog.dev/.
-# Desabilita taxonomias (tags, categories) - OK se for sua intenção.
 disableKinds = ["taxonomy"]
 ignoreErrors = ["error-disable-taxonomy"]
 [permalinks]
-  blog = "/:slug/" # URLs para posts dentro de /content/blog/ -> seusite.com/slug-do-post/ - OK
+  blog = "/:slug/"
 
 [params]
   # Descrição curta para meta tags SEO e previews (Idealmente < 160 caracteres)
-  description = "Blog pessoal do Breno Santana, onde ele escreve sobre música, tecnologia, internet, fotografia e outros tópicos pessoais." # << SUGESTÃO de versão mais curta
-
-  # O parâmetro favicon provavelmente não é mais necessário após usar RealFaviconGenerator
-  # favicon = ["favicon.png"] # << COMENTADO/REMOVIDO - Controle agora está em custom_head.html
-
+  description = "Blog pessoal do Breno Santana, onde ele escreve sobre música, tecnologia, internet, fotografia e outros tópicos pessoais."
   # Imagem padrão para Open Graph / Twitter Cards (usada quando a página não tem imagem específica)
   # Recomenda-se usar uma imagem 1200x630px.
-  images = ["images/default-share.jpg"] # << ATUALIZADO - Crie esta imagem em static/images/default-share.jpg
-
-  # title usado para og:site_name nos templates internos do Hugo
-  title = "Breno's Blog" # << OK
-
-  # Linha "Made with..." no rodapé (padrão = mostrar)
-  # hideMadeWithLine = true
-
-  # Formato de data (padrão do tema = "02 Jan, 2006")
-  # dateFormat = "02/01/2006" # << Exemplo de formato brasileiro, descomente se preferir
+  images = ["images/default-share.jpg"]
+  title = "Breno's Blog"
