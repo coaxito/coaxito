@@ -1,12 +1,12 @@
 <style>
   :root {
-    /* --- Variáveis Globais e Paleta Light Mode --- */
+    /* --- Variáveis Globais e Paleta Light Mode */
     --width: 720px;
     --font-main: 'Literata', sans-serif;
     --font-secondary: 'Literata', sans-serif;
     --font-scale: 1em;
 
-    /* Cores Confortáveis (Light) - Seus Ajustes */
+    /* Cores Confortáveis (Light) */
     --background-color: #ede7e3;
     --heading-color: #141313;
     --text-color: #141313;
@@ -19,74 +19,66 @@
 
   /* --- Tema Escuro (Definição via Classe) --- */
   html.dark {
-    --background-color: #1a1a1a; /* Seu Ajuste */
-    --heading-color: #e5e3e1;    /* Seu Ajuste */
-    --text-color: #e5e3e1;       /* Seu Ajuste */
-    --link-color: #d1d7d7;
-    --visited-color: var(--link-color);
-    --code-background-color: #1a1a1a;
-    --code-color: #cccccc;
-    --blockquote-color: var(--link-color); /* <<-- CORREÇÃO AQUI (removido # e ; extra) */
-  }
-
-/* --- Tema leaf (Definição via Classe) --- */
- html.leaf {
-   --background-color: #FFFDF6; /* <<-- Corrigido */
-   --heading-color: #626F47;     /* <<-- Corrigido */
-   --text-color: #626F47;        /* <<-- Corrigido */
-   --link-color: #A4B465;        /* <<-- Corrigido */
-   --visited-color: var(--link-color);
-   --code-background-color: #FFFDF6;
-   --code-color: #264653;
-   --blockquote-color: #2a9d8f;
- }
- 
-/* --- Tema Cake (Definição via Classe) --- */
-html.cake {
-  --background-color: #FEF3E2; /* Ex: LavenderBlush (rosa bem claro) */
-  --heading-color:    #874356; /* Ex: SaddleBrown (marrom escuro) */
-  --text-color:       #874356; /* Ex: Sienna (marrom) */
-  --link-color:       #C65D7B; /* Ex: HotPink */
-  --visited-color:    var(--link-color);
-  --code-background-color: #FAEBD7; /* Ex: AntiqueWhite */
-  --code-color:       #8B4513; /* Ex: SaddleBrown */
-  --blockquote-color: #A0522D; /* Ex: Sienna */
-}
-}
-
-  /* Aplica cores escuras baseado na preferência do Sistema (como padrão inicial) */
-  /* Evita aplicar se o usuário escolheu light manualmente (classe .light ou .leaf) */
-  
-  
- @media (prefers-color-scheme: dark) {
-  html:not(.light):not(.leaf):not(.cake) { /* <<-- ADICIONADO :not(.cake) */
-    /* ... variáveis de cor do tema dark aqui ... */
-    /* (Mantive as correções que fiz antes aqui também) */
     --background-color: #1a1a1a;
     --heading-color: #e5e3e1;
     --text-color: #e5e3e1;
     --link-color: #d1d7d7;
     --visited-color: var(--link-color);
     --code-background-color: #1a1a1a;
-    --code-color: #cccccc; /* Corrigido de #1a1a1a */
+    --code-color: #cccccc;
+    --blockquote-color: var(--link-color);
+  }
+
+/* --- Tema Ecologic (Definição via Classe) --- */
+ html.ecologic {
+   --background-color: #FFFDF6;
+   --heading-color: #626F47;
+   --text-color: #626F47;
+   --link-color: #A4B465;
+   --visited-color: var(--link-color);
+   --code-background-color: #FFFDF6;
+   --code-color: #264653;
+   --blockquote-color: #2a9d8f;
+ }
+ 
+/* --- Tema Cherry (Definição via Classe) --- */
+html.cherry {
+  --background-color: #FEF3E2;
+  --heading-color:    #874356;
+  --text-color:       #874356;
+  --link-color:       #C65D7B;
+  --visited-color:    var(--link-color);
+  --code-background-color: #FAEBD7;
+  --code-color:       #8B4513;
+  --blockquote-color: #A0522D;
+}
+}
+    
+ @media (prefers-color-scheme: dark) {
+  html:not(.light):not(.ecologic):not(.cherry) {
+    /* ... variáveis de cor do tema dark aqui ... */
+    --background-color: #1a1a1a;
+    --heading-color: #e5e3e1;
+    --text-color: #e5e3e1;
+    --link-color: #d1d7d7;
+    --visited-color: var(--link-color);
+    --code-background-color: #1a1a1a;
+    --code-color: #d1d7d7;
     --blockquote-color: var(--link-color);
   }
 }
 
   /* --- Regras Específicas que só valem no modo escuro --- */
-  /* (Pode querer adicionar regras para .leaf também se necessário) */
   html.dark main ul li a,
   html.dark main ul li a:visited {
       color: var(--heading-color);
   }
   @media (prefers-color-scheme: dark) {
-    html:not(.light):not(.leaf) main ul li a, /* <<-- CORREÇÃO AQUI */
-    html:not(.light):not(.leaf) main ul li a:visited { /* <<-- CORREÇÃO AQUI */
+    html:not(.light):not(.ecologic) main ul li a,
+    html:not(.light):not(.ecologic) main ul li a:visited {
         color: var(--heading-color);
     }
   }
-  /* --- Fim das regras específicas do Dark Mode --- */
-
 
   /* --- Regras CSS Gerais --- */
   body {
@@ -141,7 +133,6 @@ html.cake {
 
   /* --- Estilos para o Cabeçalho Principal --- */
   header {
-    /* Sem display: flex aqui por padrão */
     margin-bottom: 2.5em; /* Espaço abaixo do header */
     margin-bottom: 1.5em; /* Espaço abaixo do header */
   }
@@ -150,12 +141,12 @@ html.cake {
     color: var(--heading-color);
     text-decoration: none;
     display: block;
-    margin-bottom: 0.5em; /* Espaço entre título e nav/botão ABAIXO dele */
+    margin-bottom: 0.5em; /* Espaço entre título e nav */
   }
 
   header p.site-title { /* Parágrafo com o título */
     font-family: var(--font-main);
-    font-size: 1.4em; /* Ajuste como quiser */
+    font-size: 1.4em;
     font-weight: bold;
     margin: 0;
     line-height: 2em;
@@ -164,10 +155,10 @@ html.cake {
 
   header a.title:hover { color: var(--heading-color); text-decoration: none; }
 
-  /* --- Estilos para a Navegação e Botão de Tema --- */ /* <<-- CORREÇÃO AQUI (Simplificado comentário) */
+  /* --- Estilos para a Navegação e Botão de Tema --- */
   header nav { /* Container da navegação (Home, Blog, Botão) */
-      display: flex;                 /* <<-- MUDANÇA AQUI (Flexbox adicionado) */
-      align-items: center;           /* <<-- MUDANÇA AQUI (Centraliza verticalmente) */
+      display: flex;
+      align-items: center;
   }
 
   #theme-toggle {
@@ -175,19 +166,19 @@ html.cake {
     border: none;
     padding: 0;
     cursor: pointer;
-    /* margin-left: 8px; */ /* <<-- CORREÇÃO AQUI (Removido, flexbox cuida disso) */
-    vertical-align: middle; /* Ajuda, mas align-items em nav é principal */
-    line-height: 1;         /* Importante para consistência do ícone */
-    font-size: 0.8em;       /* Ou o tamanho que você definiu */
+    /* margin-left: 8px; */
+    vertical-align: middle;
+    line-height: 1;         
+    font-size: 0.8em;       
     color: var(--link-color);
-    position: relative;     /* Mantém para o ajuste 'top' */
-    top: -5px;               /* Ou o ajuste vertical que você definiu */
+    position: relative;    
+    top: -5px;
   }
   #theme-toggle:hover { opacity: 1; } /* Você mudou para 1, mantive */
 
   html.dark #theme-toggle { color: var(--link-color); }
-  html.leaf #theme-toggle { color: var(--link-color); } /* <<-- ADICIONADO (Define cor para o tema leaf) */
-                                                      /* Ajuste a cor se quiser diferente para leaf */
+  html.ecologic #theme-toggle { color: var(--link-color); } /* <<-- ADICIONADO (Define cor para o tema ecologic) */
+                                                      /* Ajuste a cor se quiser diferente para ecologic */
 
   /* --- Controle de visibilidade dos Ícones de Tema (4 Temas) --- */
 
@@ -196,35 +187,32 @@ html.cake {
 /* Esconde TODOS os ícones por padrão */
 #theme-toggle .icon-light,
 #theme-toggle .icon-dark,
-#theme-toggle .icon-leaf,
-#theme-toggle .icon-cake { /* <-- Inclui .icon-cake */
+#theme-toggle .icon-ecologic,
+#theme-toggle .icon-cherry {
   display: none;
 }
 
 /* Mostra APENAS o ícone correto baseado na classe ATIVA do HTML */
 html.light #theme-toggle .icon-light { display: inline; }
 html.dark #theme-toggle .icon-dark { display: inline; }
-html.leaf #theme-toggle .icon-leaf { display: inline; }
-html.cake #theme-toggle .icon-cake { display: inline; } /* <-- Regra para cake */
+html.ecologic #theme-toggle .icon-ecologic { display: inline; }
+html.cherry #theme-toggle .icon-cherry { display: inline; }
 
 /* Regra de fallback */
-html:not(.dark):not(.leaf):not(.cake) #theme-toggle .icon-light { /* <-- Inclui :not(.cake) */
+html:not(.dark):not(.ecologic):not(.cherry) #theme-toggle .icon-light {
    display: inline;
 }
-/* (Regras de cor para #theme-toggle em cada tema, se necessário) */
-/* Se quiser que a cor do ícone mude com o tema, adicione/ajuste aqui */
-html.dark #theme-toggle { color: var(--link-color); } /* Exemplo: Usa a cor do link do tema dark */
-html.leaf #theme-toggle { color: var(--link-color); } /* Exemplo: Usa a cor do link do tema leaf */
-html.cake #theme-toggle { color: var(--link-color); } /* Exemplo: Usa a cor do link do tema cake */
+
+/* Cor do ícone de acordo com o tema */
+html.dark #theme-toggle { color: var(--link-color); }
+html.ecologic #theme-toggle { color: var(--link-color); }
+html.cherry #theme-toggle { color: var(--link-color); }
 /* A cor para o tema light já está definida na regra principal #theme-toggle */
-
-  /* --- Fim dos Estilos do Cabeçalho --- */
-
 
   /* --- Demais Estilos (.inline, .highlight, etc) --- */
   .inline { width: auto !important; }
 
-  .highlight, pre.code { /* Blocos de código */
+  .highlight, pre.code {
     padding: 1em;
     background-color: var(--code-background-color);
     color: var(--code-color);
@@ -247,35 +235,35 @@ html.cake #theme-toggle { color: var(--link-color); } /* Exemplo: Usa a cor do l
       font-size: 1em;
       text-decoration: none;
       font-weight: unset;
-      max-width: 80% /* Você adicionou isso */
+      max-width: 80%
   }
-  main ul li a:hover { text-decoration: none; opacity: 1; } /* Você mudou para 1 */
+  main ul li a:hover { text-decoration: none; opacity: 1; }
 
   main ul li span { /* Span da Data na lista */
     margin-left: 1em;
-    font-size: 0.9em; /* Você mudou */
-    opacity: 1;       /* Você mudou */
+    font-size: 0.9em;
+    opacity: 1;
     display: block;
   }
 
 
-  /* --- Media Query para Telas Pequenas (Celulares) --- */
+  /* --- Media Query para dispositivos móveis --- */
+
   @media (max-width: 767px) {
     main ul li a { max-width: 60%; display: block; font-size: 1em; }
     main ul li span { display: block; text-align: left; margin-left: 0; margin-top: 0.3em; }
     main article h1 { max-width: 80%;
     body { padding: 20px; }
-    header p.site-title { font-size: 1.4em; } /* Você mudou */
-    header a.title { margin-bottom: 0.25em;} /* Você mudou */
-    #theme-toggle { font-size: 0.9em; } /* Você mudou */
-     /* Poderia ajustar o 'top' aqui se precisar para telas pequenas também: */
-     /* #theme-toggle { font-size: 1em; top: 2px; } */
+    header p.site-title { font-size: 1.4em; }
+    header a.title { margin-bottom: 0.25em;}
+    #theme-toggle { font-size: 0.9em; }
+
   } /* --- Fim da Media Query --- */
 
 
   /* --- Estilos para Figure/Figcaption (Otimização de Imagem) --- */
   figure { margin: 1.5em 0; padding: 0; }
   figure img, figure picture { max-width: 100%; height: auto; display: block; margin: 0 auto; border-radius: 5; }
-  figure figcaption { text-align: center; font-size: 0.9em; color: var(--text-color); margin-top: 0.5em; opacity: 1;} /* Você mudou */
+  figure figcaption { text-align: center; font-size: 0.9em; color: var(--text-color); margin-top: 0.5em; opacity: 1;}
 
 </style>
