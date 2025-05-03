@@ -27,21 +27,3 @@ body.kind-404 h2 {
     font-size: 1rem;
     font-family: var(--font-main); color: var(--heading-color); font-weight: unset;
 }
-
-a.footnote-ref {
-    font-size: 0.7em;
-    color: var(--link-color);
-    font-weight: bold;
-}
-
-a.footnote-backref {
-    font-size: 0.8em;
-    color: var(--link-color);
-    font-weight: unset;
-}
-
-div.footnotes {
-  font-size: 0.9em;
-  color: var(--link-color);
-    
-}

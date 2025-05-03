@@ -60,4 +60,4 @@ Se o meu jardim sereno te acolhe, então ele também te pertence — pois nasceu
 
 A medida que as ideias florescem, nutridas pelo cuidado constante, o cenário revelará a essência da sua autêntica identidade.
 
-[^1]: Antoine de Saint-Exupéry, O Pequeno Príncipe, 1943.
+[^1]: Antoine de Saint-Exupéry, "O Pequeno Príncipe", 1943.
