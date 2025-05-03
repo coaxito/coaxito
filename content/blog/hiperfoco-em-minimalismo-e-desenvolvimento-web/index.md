@@ -1,18 +1,18 @@
 +++
-title = "Hiperfoco em minimalismo e desenvolvimento web"
+title = "Hiperfoco, minimalismo e meu jardim inspirador"
 date = "2025-05-01"
 lastmod = "2025-05-02"
 tags = ["tecnologia"]
 url = "/hiperfoco-em-minimalismo-e-desenvolvimento-web/"
-description = "Definir..."
+description = "Uma reflexão sobre a criação de um blog minimalista, onde simplicidade e afeto se entrelaçam para cultivar um ambiente digital com propósito e autenticidade."
 images = ["/thumbnails/folha_minimalista.jpg"]
 author = "Breno Santana"
-sharing_image_alt = "Uma reflexão sobre a criação de um blog minimalista, onde código, simplicidade e afeto se entrelaçam para cultivar um espaço digital com propósito e autenticidade."
+sharing_image_alt = "Uma única folha verde escura, de formato característico e com nervuras visíveis, com seu caule fino e longo, isolada contra um fundo totalmente branco."
 +++
 
 ## Tecendo meu quadro de ponderações
 
-Os últimos três dias foram intensos — tempo exaustivo de tela, linhas de código infinitas e ipncontáveis xícaras de café.
+Os últimos três dias foram intensos — sessões exaustivas com muito tempo de tela, linhas de código infinitas e incontáveis xícaras de café.
 
 Havia iniciado minha jornada em busca de um blog independente, que pudesse refletir precisamente meus conceitos e princípios.
 
@@ -56,6 +56,8 @@ O código-fonte deste projeto está em domínio público, porque acredito que to
 
 Se o meu jardim sereno te acolhe, então ele também te pertence — pois nasceu e cresceu de um mosaico de reflexões coletivas.
 
-> Tu te tornas eternamente responsável por aquilo que cativas.
+> Tu te tornas eternamente responsável por aquilo que cativas.[^1]
 
-À medida que as ideias florescem, nutridas pelo cuidado constante, o cenário revelará a essência da sua autêntica identidade.
+A medida que as ideias florescem, nutridas pelo cuidado constante, o cenário revelará a essência da sua autêntica identidade.
+
+[^1]: Antoine de Saint-Exupéry, O Pequeno Príncipe, 1943.
