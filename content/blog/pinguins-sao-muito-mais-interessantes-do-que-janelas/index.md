@@ -54,6 +54,8 @@ Existem pinguins bem remunerados trabalhando nos bastidores dos servidores que h
 
 E se isso já te parece impressionante, saiba que eles foram além — para onde nenhum humano jamais pisou (pelo menos por enquanto).
 
-O helicóptero Ingenuity, que voa sobre o solo marciano ao lado do rover Perseverance, opera com um sistema baseado em Linux.
+O helicóptero Ingenuity, que voa sobre o solo marciano ao lado do rover Perseverance, opera com um sistema baseado em Linux.[^1]
 
 Em meio ao frio extremo e à atmosfera rarefeita de Marte, lá estão eles, provando que pinguins podem sim voar — pelo menos no espaço.
+
+[^1]: Bijan Stephen, ["Linux has made it to Mars"](https://www.theverge.com/2021/2/19/22291324/linux-perseverance-mars-curiosity-ingenuity) The Verge, 19 de fevereiro de 2021.

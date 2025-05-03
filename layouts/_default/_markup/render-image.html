@@ -6,8 +6,8 @@
     {{ $maxWidth := 720 }}
 
     {{ if gt $src.Width $maxWidth }}
-      {{ $data.Set "webp" ($src.Resize (printf "%dx webp q80" $maxWidth)) }}
-      {{ $data.Set "fallback" ($src.Resize (printf "%dx q80" $maxWidth)) }}
+      {{ $data.Set "webp" ($src.Resize (printf "%dx webp q85" $maxWidth)) }}
+      {{ $data.Set "fallback" ($src.Resize (printf "%dx q85" $maxWidth)) }}
       {{ $data.Set "width" $maxWidth }}
       {{ $data.Set "height" ($data.Get "fallback").Height }}
     {{ else }}
