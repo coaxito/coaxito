@@ -52,7 +52,7 @@ Não construí este espaço por acaso — ele nasceu das pequenas coisas que me 
 
 ![Lua crescente fina e brilhante, posicionada ligeiramente à direita do centro, num céu noturno azul-escuro e sem estrelas, com a sua forma completa subtilmente visível.](lua_minimalista.jpg "Reprodução: James Eades")
 
-O código-fonte deste projeto está em domínio público, porque acredito que toda voz que deseja se expressar merece ser ouvida.
+O [código-fonte](https://github.com/coaxito/coaxito/) deste projeto está em domínio público, porque acredito que toda voz que deseja se expressar merece ser ouvida.
 
 Se o meu jardim sereno te acolhe, então ele também te pertence — pois nasceu e cresceu de um mosaico de reflexões coletivas.
 

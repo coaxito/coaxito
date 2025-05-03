@@ -6,8 +6,8 @@
     {{ $maxWidth := 720 }}
 
     {{ if gt $src.Width $maxWidth }}
-      {{ $data.Set "webp" ($src.Resize (printf "%dx webp q85" $maxWidth)) }}
-      {{ $data.Set "fallback" ($src.Resize (printf "%dx q85" $maxWidth)) }}
+      {{ $data.Set "webp" ($src.Resize (printf "%dx webp q80" $maxWidth)) }}
+      {{ $data.Set "fallback" ($src.Resize (printf "%dx q80" $maxWidth)) }}
       {{ $data.Set "width" $maxWidth }}
       {{ $data.Set "height" ($data.Get "fallback").Height }}
     {{ else }}
@@ -22,8 +22,6 @@
     {{ $imgWidth := $data.Get "width" }}
     {{ $imgHeight := $data.Get "height" }}
 
-    {{/* Link opcional para a imagem original */}}
-    <a href="{{ $src.RelPermalink }}" target="_blank" rel="noopener noreferrer">
       <picture>
         <source srcset="{{ $webp.RelPermalink }}" type="image/webp">
         <img src="{{ $fallback.RelPermalink }}"
@@ -41,5 +39,5 @@
 {{ else }}
   {{/* Fallback se não for Page Resource */}}
   <img src="{{ .Destination | safeURL }}" alt="{{ .Text }}" loading="lazy" />
-  <p style="color: red; font-size: small;">(Aviso: Imagem '{{ .Destination | safeURL }}' não é um Page Resource. Otimização não aplicada.)</p>
+  <p style="color: red; font-size: small;">(Comunicado: A imagem '{{ .Destination | safeURL }}' não é um Page Resource. A otimização não será aplicada.)</p>
 {{ end }}
